@@ -1,0 +1,27 @@
+---
+en:
+  header:
+    search: "Search Project"
+    begin: "Begin Project"
+    about_vvf: "About VVF"
+    login: "Login"
+    logout: "Logout"
+    register: "Register"
+    news: "News"
+    help: "Help"
+    mypage: "My Page"
+  footer:
+    faqs: "FAQs"
+  helps:
+    sidemenu:
+      what_is_vvf: "What is Vin-Vin Funding?"
+      creators_guide: "Creator's Guide"
+      how_to_create: "How To Create"
+      supporters_guide: "Supporter's Guide"
+      how_to_support: "How To Support"
+      about_payment: "About Payment"
+      faqs: "FAQs"
+      about_vvf: "About Vin-Vin Funding"
+      creator_questions: "Creator Questions"
+      supporter_questions: "Supporter Questions"
+      about_payment: "About Payment"

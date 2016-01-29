@@ -1,0 +1,43 @@
+<div class="col-md-3 fixed-base">
+  <div class="panel panel-default fixed-box" style="margin-top: 30px;">
+    <div class="panel-heading">
+    </div>
+    <ul class="nav nav-pills nav-stacked">
+      <li><%= link_to t('helps.sidemenu.what_is_vvf'), root_path %></li>
+
+      <li data-toggle="collapse" href="#creators-guide-collapse">
+        <a href="#"><%= t('helps.sidemenu.creators_guide') %>
+        <span class="caret"></span></a>
+      </li>
+      <ul id="creators-guide-collapse" class="collapse <%= 'in' if defined?(creators_guide_expanded) %>"
+                                       style="list-style-type:none;">
+        <li><%= link_to t('helps.sidemenu.how_to_create'), helps_how_to_create_path %></li>
+      </ul>
+
+      <li data-toggle="collapse" href="#supporters-guide-collapse">
+        <a href="#"><%= t('helps.sidemenu.supporters_guide') %>
+        <span class="caret"></span></a>
+      </li>
+      <ul id="supporters-guide-collapse" class="collapse <%= 'in' if defined?(supporters_guide_expanded) %>"
+                                         style="list-style-type:none;">
+        <li><%= link_to t('helps.sidemenu.how_to_support'), helps_how_to_support_path %></li>
+        <li><%= link_to t('helps.sidemenu.about_payment'), helps_aboutpayment_path %></li>
+      </ul>
+
+      <li>
+        <%= link_to helps_faqs_path do %>
+	  <%= t('helps.sidemenu.faqs') %>
+          <span class="caret"></span></a>
+	<% end %>
+      </li>
+      <ul class="<%= 'hidden' if !defined?(faqs_expanded) %>" style="list-style-type:none;">
+        <li><%= link_to t('helps.sidemenu.about_vvf'), '#about-vvf' %></li>
+        <li><%= link_to t('helps.sidemenu.creator_questions'), '#creator-questions' %></li>
+        <li><%= link_to t('helps.sidemenu.supporter_questions'), '#supporter-questions' %></li>
+        <li><%= link_to t('helps.sidemenu.about_payment'), '#about-payment' %></li>
+      </ul>
+
+    </ul>
+  </div>
+</div>
+

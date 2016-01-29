@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  scope "(:locale)" do
+    root 'helps#aboutvvf'
+  
+    get 'helps/how_to_create'
+  
+    get 'helps/how_to_support'
+  
+    get 'helps/aboutpayment'
+  
+    get 'helps/faqs'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

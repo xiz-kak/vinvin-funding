@@ -13,7 +13,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails_dev
+  database: vvf_dev
   username: rails_user
   password: rails_user
   host: localhost
@@ -23,7 +23,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: vvf_test
+  username: rails_user
+  password: rails_user
+  host: localhost
 
 production:
   <<: *default

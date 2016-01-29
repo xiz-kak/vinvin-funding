@@ -1,0 +1,49 @@
+// Place all the styles related to the Helps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-box {
+  margin-bottom: 30px;
+  background: $gray-lighter;
+  border-radius: 6px;
+  border-bottom: 2px solid $gray-light;
+  padding: 20px;
+}
+
+.top-box-1 {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.top-box-p {
+  font-size: 1.5rem;
+  line-height: 2em;
+  word-break: normal;
+}
+
+.helps-section {
+  background: $gray-lighter;
+  border-radius: 6px;
+  border-bottom: 2px solid $gray-light;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.helps-section-title {
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.anchor {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+.fixed-base .fixed-box.fixed {
+  position: fixed;
+  top: 50px;
+  z-index: 9999;
+}

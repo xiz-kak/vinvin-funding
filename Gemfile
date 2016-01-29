@@ -31,6 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'pg',             '0.17.1'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

@@ -1,0 +1,22 @@
+<!-- <header class="navbar navbar-fixed-top navbar-inverse"> -->
+<header class="navbar navbar-fixed-top">
+  <div class="container">
+    <%= link_to image_tag('vvf_logo.png', size: '240x40' , alt: 'Vin-Vin Funding Logo'),
+                root_path, class: 'logo' %>
+
+    <p class="navbar-text navbar-left">
+      <%= link_to_if (params[:locale] != 'en' && !params[:locale].blank?), 'English', url_for(locale: :en) %>|
+      <%= link_to_if params[:locale] != 'vi', 'Tiếng Việt', url_for(locale: :vi) %>|
+      <%= link_to_if params[:locale] != 'ja', '日本語', url_for(locale: :ja) %>
+    </p>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t('header.search') , root_path %></li>
+        <li><%= link_to t('header.begin') , root_path %></li>
+        <li><%= link_to t('header.about_vvf') , root_path %></li>
+        <li><%= link_to t('header.login') , root_path %></li>
+        <li><%= link_to t('header.register') , root_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
