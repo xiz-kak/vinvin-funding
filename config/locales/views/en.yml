@@ -25,3 +25,21 @@ en:
       creator_questions: "Creator Questions"
       supporter_questions: "Supporter Questions"
       about_payment: "About Payment"
+  main:
+    recommended: "Highly Recommended"
+    ranking: "Ranking"
+    pledged_ranking: "Pledged Ranking"
+    return_ranking: "Return Ranking"
+    new_projects: "New Projects"
+    success_projects: "Success Projects"
+  news:
+    vvf_news: "Vin-Vin Funding News"
+  projects:
+    search_pjt: "Search Projects"
+    open: "Opened Projects"
+    last_minute: "Last Minute Projects"
+    new: "New Projects"
+    big: "Big Fund Projects"
+    final_push: "Final Pushing Projects"
+    list: "Project List"
+    search_by_ctgr: "Search by Category"

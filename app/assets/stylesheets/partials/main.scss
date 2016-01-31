@@ -1,0 +1,239 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hero {
+  background-size: cover;
+  height: 310px
+}
+
+.hero-content {
+  background: white;
+  width: 800px;
+  height: 250px;
+  margin: auto;
+  position: relative;
+  top: 30px;
+  border-radius: 2px;
+  overflow: visible;
+}
+
+section.sash-success:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  background: url("sash_success.png") no-repeat 0px 0px;
+  width: 107px;
+  height: 91px;
+  z-index: 999;
+}
+
+.hero-left {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 370px;
+  height: 225px;
+  overflow: hidden;
+}
+
+.hero-right {
+  position: absolute;
+  top: 13px;
+  left: 390px;
+  width: 395px;
+  height: 225px;
+}
+
+.hero-right-01 {
+  height: 60px;
+  a {
+    color: $gray-dark;
+  }
+}
+
+.hero-right-02 {
+  position: relative;
+  height: 50px;
+  a {
+    img {
+      border-radius: 4px;
+    }
+    span {
+      position: relative;
+      left: 8px;
+      top: -5px;
+    }
+  }
+  .category-link {
+    position: absolute;
+    top: 30px;
+    text-align: left;
+    left: 45px;
+    z-index: 25;
+    height: 18px;
+    line-height: 18px;
+    color: #434343;
+    .glyphicon {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.hero-right-03 {
+  .hero-right-03-01 {
+    line-height: 30px;
+    height: 35px;
+    position: relative;
+    dl {
+      font-size: 12px;
+      position: relative;
+      margin-bottom: 0px;
+      text-indent: 2px;
+      dt {
+        position: absolute;
+        font-size: 15px;
+        top: 5px;
+      }
+      dd {
+        position: absolute;
+        top: 0px;
+        right: 3px;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .hero-right-03-02 {
+    height: 30px;
+    line-height: 30px;
+    background: #C9C9C9;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: auto;
+    .meter {
+      height: 30px;
+      line-height: 30px;
+      background: #bbf117;
+      position: relative;
+      -webkit-transition: all 0.4s ease;
+      p {
+        position: absolute;
+        left: 15px;
+        font-size: 15px;
+        top: 1px;
+        width: 115px;
+      }
+    }
+  }
+
+  .hero-right-03-03 {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    .hero-right-03-03-01 {
+      position: absolute;
+      dl {
+        position: relative;
+        width: 250px;
+        height: 35px;
+        line-height: 35px;
+        dt {
+          position: absolute;
+          font-size: 14px;
+          text-indent: 2px;
+          margin-right: 20px;
+          line-height: 35px;
+          color: #434343;
+          .glyphicon {
+            width: 15px;
+            height: 15px;
+          }
+        }
+        dd {
+          position: absolute;
+          right: 0px;
+          font-size: 23px;
+          width: 128px;
+          line-height: 35px;
+        }
+      }
+    }
+    .hero-right-03-03-02 {
+      position: absolute;
+      right: 0px;
+      dl {
+        position: relative;
+        width: 140px;
+        height: 35px;
+        line-height: 35px;
+        dt {
+          position: absolute;
+          font-size: 14px;
+          text-indent: 0px;
+          margin-right: 20px;
+          line-height: 35px;
+          color: #434343;
+          .glyphicon {
+            width: 15px;
+            height: 15px;
+          }
+        }
+        dd {
+          position: absolute;
+          right: 3px;
+          font-size: 23px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+}
+
+
+/* #popular-base  */
+
+.recommended-area {
+  //width: 1000px;
+  margin: 20px auto 10px auto;
+  padding-left: 5px;
+  position: relative;
+  a.recommended-pjt-aside {
+    position: absolute;
+    font-size: 12px;
+    top: 0px;
+    background: #5DAFD4;
+    display: block;
+    border-radius: 2px;
+    width: 190px;
+    color: white;
+    text-align: center;
+    line-height: 31px;
+    right: 0;
+  }
+}
+
+.recommended-pjt-base {
+  // margin: 0 -35px 0 0;
+  // .pjt-box {
+  //   width: 310px;
+  //   height: 390px;
+  //   position: relative;
+  //   float: left;
+  //   margin-right: 35px;
+  //   margin-bottom: 35px;
+  //   background: white;
+  //   border-radius: 4px;
+  //   border-bottom: 2px solid #e7e7e7;
+  // }
+}
+
+.ranking-area {
+  margin: 20px auto 10px auto;
+  padding-left: 5px;
+  position: relative;
+}

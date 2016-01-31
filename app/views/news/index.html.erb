@@ -1,0 +1,20 @@
+<% provide(:title, "News") %>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+  <h2><%= t('news.vvf_news') %></h2>
+  <table class="table">
+    <tr>
+      <td>2015/12/01</td>
+      <td>
+        <%= link_to news_detail_path do %>
+          <h3>[IMPORTANT]System unavailable for maintenance.</h3>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>repeat 10, with pagination</td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+</div>

@@ -1,0 +1,339 @@
+<% provide(:title, "Top") %>
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="hero" style="background-image:url(<%= asset_path 'ex_hero_main.jpg' %>)">
+      <section class="hero-content sash-success">
+        <div class="sash-success">
+        </div>
+        <div class="hero-left">
+          <%= link_to root_path do%>
+            <%= image_tag('ex_hero_left.jpg', width: '100%', height: '100%', alt: 'Hero image') %>
+          <% end %>
+        </div>
+        <div class="hero-right">
+          <div class="hero-right-01">
+            <%= link_to root_path do %>
+              <h2>マグネットでかんたん接続＆取り外し、革新的な充電ケーブル！煩わしさを解消</h2>
+            <% end %>
+          </div>
+          <div class="hero-right-02">
+            <%= link_to root_path do %>
+              <%= image_tag('ex_hero_thumb.jpg') %>
+              <span>いいのべ</span>
+            <% end %>
+            <%= link_to root_path, class:'category-link' do %>
+              <span class="glyphicon glyphicon-tag"></span>
+              <span>Product</span>
+            <% end %>
+          </div>
+          <div class="hero-right-03">
+            <div class="hero-right-03-01">
+              <dl>
+                <dt>
+                  <span class="glyphicon glyphicon-usd"></span>
+                  <span>Pledged</span>
+                </dt>
+                <dd>$30,456</dd>
+              </dl>
+            </div>
+            <div class="hero-right-03-02">
+              <div class="meter" style="width: 30%">
+                <p>30%</p>
+              </div>
+            </div>
+            <div class="hero-right-03-03">
+              <div class="hero-right-03-03-01">
+                <dl>
+                  <dt>
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span>Supporters</span>
+                  </dt>
+                  <dd>2,500</dd>
+                </dl>
+              </div>
+              <div class="hero-right-03-03-02">
+                <dl>
+                  <dt>
+                    <span class="glyphicon glyphicon-time"></span>
+                    <span>Days to Go</span>
+                  </dt>
+                  <dd>12</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="popular-base">
+      <div class="recommended-area">
+        <h2><span class="glyphicon glyphicon-bullhorn"></span><span><%= t('main.recommended') %></span></h2>
+        <%= link_to 'Discover Project', root_path, class: 'recommended-pjt-aside' %>
+        <div class="recommended-pjt-base">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>SuccessOrNot</th>
+              <th>Title</th>
+              <th>Thumbnail</th>
+              <th>Creator</th>
+              <th>Category</th>
+              <th>Pledged Amount</th>
+              <th>Funded %</th>
+              <th>Supporters</th>
+              <th>Days/Hours to Go</th>
+            </tr>
+            <tr>
+              <td><%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %></td>
+              <td>Success</td>
+              <td>We are doing something!!</td>
+              <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+              <td>Me</td>
+              <td>Product</td>
+              <td>$24,094</td>
+              <td>34%</td>
+              <td>132</td>
+              <td>23Days</td>
+            </tr>
+            <tr>
+              <td>repeat 9 times</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="favorite-ranking-area ranking-area">
+        <h2><span class="glyphicon glyphicon-king"></span><span><%= t('main.ranking') %></span></h2>
+        <div class="favorite-ranking-pjt-base">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>SuccessOrNot</th>
+              <th>Title</th>
+              <th>Thumbnail</th>
+              <th>Creator</th>
+              <th>Category</th>
+              <th>Pledged Amount</th>
+              <th>Funded %</th>
+              <th>Supporters</th>
+              <th>Days/Hours to Go</th>
+            </tr>
+            <tr>
+              <td><%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %></td>
+              <td>Success</td>
+              <td>We are doing something!!</td>
+              <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+              <td>Me</td>
+              <td>Product</td>
+              <td>$24,094</td>
+              <td>34%</td>
+              <td>132</td>
+              <td>23Days</td>
+            </tr>
+            <tr>
+              <td>repeat 5 times</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="pledged-ranking-area ranking-area">
+        <h2><span class="glyphicon glyphicon-king"></span><span><%= t('main.pledged_ranking') %></span></h2>
+        <div class="pledged-ranking-pjt-base">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>SuccessOrNot</th>
+              <th>Title</th>
+              <th>Thumbnail</th>
+              <th>Creator</th>
+              <th>Category</th>
+              <th>Pledged Amount</th>
+              <th>Funded %</th>
+              <th>Supporters</th>
+              <th>Days/Hours to Go</th>
+            </tr>
+            <tr>
+              <td><%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %></td>
+              <td>Success</td>
+              <td>We are doing something!!</td>
+              <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+              <td>Me</td>
+              <td>Product</td>
+              <td>$24,094</td>
+              <td>34%</td>
+              <td>132</td>
+              <td>23Days</td>
+            </tr>
+            <tr>
+              <td>repeat 5 times</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="return-ranking-area ranking-area">
+        <h2><span class="glyphicon glyphicon-king"></span><span><%= t('main.return_ranking') %></span></h2>
+        <div class="return-ranking-pjt-base">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>SuccessOrNot</th>
+              <th>Title</th>
+              <th>Thumbnail</th>
+              <th>Creator</th>
+              <th>Category</th>
+              <th>Pledged Amount</th>
+              <th>Funded %</th>
+              <th>Supporters</th>
+              <th>Days/Hours to Go</th>
+            </tr>
+            <tr>
+              <td><%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %></td>
+              <td>Success</td>
+              <td>We are doing something!!</td>
+              <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+              <td>Me</td>
+              <td>Product</td>
+              <td>$24,094</td>
+              <td>34%</td>
+              <td>132</td>
+              <td>23Days</td>
+            </tr>
+            <tr>
+              <td>repeat 5 times</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="new-pjt">
+        <h2><span class="glyphicon glyphicon-leaf"></span><span><%= t('main.new_projects') %></span></h2>
+        <div class="new-pjt-base">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>SuccessOrNot</th>
+              <th>Title</th>
+              <th>Thumbnail</th>
+              <th>Creator</th>
+              <th>Category</th>
+              <th>Pledged Amount</th>
+              <th>Funded %</th>
+              <th>Supporters</th>
+              <th>Days/Hours to Go</th>
+            </tr>
+            <tr>
+              <td><%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %></td>
+              <td>Success</td>
+              <td>We are doing something!!</td>
+              <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+              <td>Me</td>
+              <td>Product</td>
+              <td>$24,094</td>
+              <td>34%</td>
+              <td>132</td>
+              <td>23Days</td>
+            </tr>
+            <tr>
+              <td>repeat 8 times</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="succeeded-pjt">
+        <h2><span class="glyphicon glyphicon-star"></span><span><%= t('main.success_projects') %></span></h2>
+        <div class="succeeded-pjt-base">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>SuccessOrNot</th>
+              <th>Title</th>
+              <th>Thumbnail</th>
+              <th>Creator</th>
+              <th>Category</th>
+              <th>Pledged Amount</th>
+              <th>Funded %</th>
+              <th>Supporters</th>
+              <th>Days/Hours to Go</th>
+            </tr>
+            <tr>
+              <td><%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %></td>
+              <td>Success</td>
+              <td>We are doing something!!</td>
+              <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+              <td>Me</td>
+              <td>Product</td>
+              <td>$24,094</td>
+              <td>34%</td>
+              <td>132</td>
+              <td>23Days</td>
+            </tr>
+            <tr>
+              <td>repeat 8 times</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- #popular-base -->
+
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="col-md-3">
+  <div class="panel panel-default" style="margin-top: 30px;">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-search"></span>
+      <%= t('projects.search_pjt') %>
+    </div>
+    <ul class="nav nav-pills nav-stacked">
+      <li><%= link_to t('projects.open'), root_path %></li>
+      <li><%= link_to t('projects.last_minute'), root_path %></li>
+      <li><%= link_to t('projects.new'), root_path %></li>
+      <li><%= link_to t('projects.big'), root_path %></li>
+      <li><%= link_to t('projects.final_push'), root_path %></li>
+      <li><%= link_to t('projects.list'), root_path %></li>
+    </ul>
+  </div>
+
+  <div class="panel panel-default" style="margin-top: 30px;">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-tag"></span>
+      <%= t('projects.search_by_ctgr') %>
+    </div>
+    <ul class="nav nav-pills nav-stacked">
+      <li><%= link_to 'Art', root_path %></li>
+      <li><%= link_to 'Product', root_path %></li>
+      <li>repeate</li>
+    </ul>
+  </div>
+</div>
