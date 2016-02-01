@@ -5,12 +5,12 @@
       <%= t('projects.search_pjt') %>
     </div>
     <ul class="nav nav-pills nav-stacked">
-      <li><%= link_to t('projects.open'), root_path %></li>
-      <li><%= link_to t('projects.last_minute'), root_path %></li>
-      <li><%= link_to t('projects.new'), root_path %></li>
-      <li><%= link_to t('projects.big'), root_path %></li>
-      <li><%= link_to t('projects.final_push'), root_path %></li>
-      <li><%= link_to t('projects.list'), root_path %></li>
+      <li><%= link_to t('projects.open'), projects_index_path %></li>
+      <li><%= link_to t('projects.last_minute'), projects_index_path %></li>
+      <li><%= link_to t('projects.new'), projects_index_path %></li>
+      <li><%= link_to t('projects.big'), projects_index_path %></li>
+      <li><%= link_to t('projects.final_push'), projects_index_path %></li>
+      <li><%= link_to t('projects.list'), projects_index_path %></li>
     </ul>
   </div>
 
@@ -20,8 +20,8 @@
       <%= t('projects.search_by_ctgr') %>
     </div>
     <ul class="nav nav-pills nav-stacked">
-      <li><%= link_to 'Art', root_path %></li>
-      <li><%= link_to 'Product', root_path %></li>
+      <li><%= link_to 'Art', projects_index_path %></li>
+      <li><%= link_to 'Product', projects_index_path %></li>
       <li>repeate</li>
     </ul>
   </div>

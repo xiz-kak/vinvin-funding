@@ -2,5 +2,54 @@
 <div class="row">
   <%= render 'sidemenu' %>
   <div class="col-md-9">
+    <div class="pjt-list-area">
+      <h2><span><%= t('projects.list') %></span></h2>
+      <h5>Top > <%= t('projects.list') %></h5>
+      <div class="pjt-list-base">
+        <table class="table">
+          <tr>
+            <th>Image</th>
+            <th>SuccessOrNot</th>
+            <th>Title</th>
+            <th>Thumbnail</th>
+            <th>Creator</th>
+            <th>Category</th>
+            <th>Pledged Amount</th>
+            <th>Funded %</th>
+            <th>Supporters</th>
+            <th>Days/Hours to Go</th>
+          </tr>
+          <tr>
+            <td>
+              <%= link_to projects_detail_path do%>
+                <%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %>
+              <% end %>
+            </td>
+            <td>Success</td>
+            <td>We are doing something!!</td>
+            <td><%= image_tag('ex_hero_thumb.jpg') %></td>
+            <td>Me</td>
+            <td>Product</td>
+            <td>$24,094</td>
+            <td>34%</td>
+            <td>132</td>
+            <td>23Days</td>
+          </tr>
+          <tr>
+            <td>repeat 10 times, with pagination</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
   </div>
 </div>

@@ -1,0 +1,239 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pjt-hero {
+  background-size: cover;
+  height: 400px
+}
+
+.pjt-hero-content {
+  background: white;
+  // width: 800px;
+  // height: 250px;
+  margin: auto;
+  position: relative;
+  top: 30px;
+  border-radius: 2px;
+  overflow: visible;
+}
+
+section.badge-success:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  background: url("sash_success.png") no-repeat 0px 0px;
+  width: 107px;
+  height: 91px;
+  z-index: 999;
+}
+
+.pjt-hero-left {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 600px;
+  // height: 350px;
+  overflow: hidden;
+}
+
+.pjt-hero-right {
+  position: absolute;
+  top: 13px;
+  left: 650px;
+  width: 450px;
+  // height: 225px;
+  .pjt-hero-right-01 {
+    .pjt-hero-right-01-01 {
+      font-size: 18px;;
+    }
+    .pjt-hero-right-01-02 {
+      font-size: 30px;
+      text-align: right;
+    }
+    .pjt-hero-right-01-03 {
+      font-size: 15px;
+      text-align: right;
+    }
+  }
+  .pjt-hero-right-02 {
+    height: 30px;
+    background: #C9C9C9;
+    border-radius: 4px;
+    margin: 10px 0px;
+    .meter {
+      height: 30px;
+      background: #bbf117;
+      position: relative;
+      -webkit-transition: all 0.4s ease;
+      p {
+        position: absolute;
+        left: 15px;
+        font-size: 15px;
+        top: 1px;
+        width: 115px;
+      }
+    }
+  }
+  .pjt-hero-right-03 {
+    //position: absolute;
+    dl {
+      position: relative;
+      width: 450px;
+      height: 35px;
+      // line-height: 35px;
+      dt {
+        position: absolute;
+        font-size: 16px;
+        text-indent: 2px;
+        margin-right: 20px;
+        line-height: 35px;
+        color: #434343;
+        .glyphicon {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      dd {
+        position: absolute;
+        right: 0px;
+        font-size: 23px;
+        width: 128px;
+        line-height: 35px;
+        text-align: right;
+      }
+    }
+  }
+  .pjt-hero-right-04 {
+    // position: absolute;
+    dl {
+      position: relative;
+      width: 450px;
+      height: 35px;
+      // line-height: 35px;
+      dt {
+        position: absolute;
+        font-size: 16px;
+        text-indent: 2px;
+        margin-right: 20px;
+        line-height: 35px;
+        color: #434343;
+        .glyphicon {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      dd {
+        position: absolute;
+        right: 0px;
+        font-size: 23px;
+        width: 128px;
+        line-height: 35px;
+        text-align: right;
+      }
+    }
+  }
+  .pjt-hero-right-05 {
+    width: 450px;
+    height: 80px;
+    border: solid 2px $gray-dark;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.pjt-title {
+  // margin-top: 370px;
+  position: absolute;
+  top: 380px;
+  h1 {
+    text-align: left;
+  }
+}
+.css-icon {
+  position: absolute;
+  top: 470px;
+}
+
+.detail-area {
+  margin-top: 5px;
+}
+
+.detail-section {
+  width: 100%;
+  background: $gray-lighter;
+  border-radius: 6px;
+  border-bottom: 2px solid $gray-light;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+#pjt-report, #pjt-comment {
+  display: none;
+}
+
+.detail-box {
+  margin: 30px 0px;
+}
+
+.report-box {
+  margin: 30px 0px;
+  border: solid 1px $gray;
+  border-radius: 4px;
+  padding: 5px;
+  .report-box-body {
+    background: white;
+  }
+}
+
+.comment-box {
+  margin: 30px 0px;
+  border: solid 1px $gray;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.btn-select-course {
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: orange;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  strong {
+    position: relative;
+    top: 7px;
+  }
+}
+
+.pjt-creator-box {
+  width: 100%;
+  background: $gray-lighter;
+  border-radius: 6px;
+  border-bottom: 2px solid $gray-light;
+  padding: 10px;
+  margin-bottom: 40px;
+  .pjt-creator-box-body {
+    background: white;
+  }
+}
+
+.pjt-course-box {
+  width: 100%;
+  background: $gray-lighter;
+  border-radius: 6px;
+  border-bottom: 2px solid $gray-light;
+  padding: 10px;
+  margin-bottom: 40px;
+  .pjt-course-box-body {
+    background: white;
+  }
+}

@@ -1,2 +1,292 @@
-<h1>Projects#detail</h1>
-<p>Find me in app/views/projects/detail.html.erb</p>
+<% provide(:title, "Details") %>
+<div class="row" style="height: 530px;">
+  <div class="col-md-12">
+    <div class="pjt-hero">
+      <section class="pjt-hero-content">
+        <div class="pjt-hero-left">
+          <%= link_to projects_detail_path do%>
+            <%= image_tag('ex_hero_left.jpg', width: '100%', height: '100%', alt: 'Hero image') %>
+          <% end %>
+        </div>
+        <div class="pjt-hero-right">
+          <div class="pjt-hero-right-01">
+            <div class="pjt-hero-right-01-01">
+              <span class="glyphicon glyphicon-usd"></span>
+              <span>Pledged</span>
+            </div>
+            <div class="pjt-hero-right-01-02">
+              <span>$23,345</span>
+            </div>
+            <div class="pjt-hero-right-01-03">
+              <span>Goal:</span>
+              <span>$60,000</span>
+            </div>
+          </div>
+          <div class="pjt-hero-right-02">
+            <div class="meter" style="width: 30%">
+              <p>30%</p>
+            </div>
+          </div>
+          <div class="pjt-hero-right-03">
+            <dl>
+              <dt>
+                <span class="glyphicon glyphicon-user"></span>
+                <span>Supporters</span>
+              </dt>
+              <dd>2,500</dd>
+            </dl>
+          </div>
+          <div class="pjt-hero-right-04">
+            <dl>
+              <dt>
+                <span class="glyphicon glyphicon-time"></span>
+                <span>Days to Go</span>
+              </dt>
+              <dd>12</dd>
+            </dl>
+          </div>
+          <div class="pjt-hero-right-05">
+            <strong>Select a Course</strong>
+          </div>
+        </div>
+      </section>
+      <div class="pjt-title">
+        <h1>マグネットでかんたん接続＆取り外し、革新的な充電ケーブル！煩わしさを解消</h1>
+        <small><span class="glyphicon glyphicon-tag"><span>Product</small>
+      </div>
+      <div class="css-icon">
+        <span class="btn btn-default btn-xs">f: Like</span>
+        <span class="btn btn-default btn-xs">t: Tweer</span>
+        <span class="btn btn-default btn-xs">Add to Favorite</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <ul class="nav nav-pills">
+      <li data-target-id="pjt-detail" class="active"><a href="#">Home</a></li>
+      <li data-target-id="pjt-report"><a href="#">Report</a></li>
+      <li data-target-id="pjt-comment"><a href="#">Commnets</a></li>
+    </ul>
+    <div class="detail-area">
+      <section id="pjt-detail" class="detail-section">
+        <div class="detail-box">
+          <div class="detail-box-title">
+            <h2>毎日の充電、もっと手軽にできたらいいなと思いませんか。</h2>
+          </div>
+          <%= image_tag('ex_pjt_detail_01.jpg', width: '100%') %>
+          <div class="detail-box-text">
+            <p class="leftText">我々は今回新製品を開発するにあたって、<span style="color:#FF0000"><span class="bold leftText">"マグネット" </span></span><span style="color:#000000">に着目しました。</span>マグネットの磁力を利用すれば、おおよそケーブルをスマホに近づけるだけで取り付けられる充電ケーブルを開発できるのではないか。そうすれば現代に欠かせないスマートフォンの毎日の充電が少しでもカンタンになったり、スマートに充電できるのではないだろうか。そんな理想を求めてトライアンドエラーを繰り返し、ついに <span style="color:#FF0000"><span class="bold leftText">&rdquo;マグネットケーブル&rdquo;</span></span>は誕生しました!!</p>
+            
+            <p class="leftText">※ご注意：本製品のLightning用のマグネットケーブルにつきましては、Apple社のMFi認証を受けた製品ではございません。そのため、充電したい製品のOSをアップデートした場合本製品が対応しない場合がございます。商品の瑕疵またMFI認証未取得による責任は弊社にございます。</p>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-box-title">
+            <h2>製品特徴</h2>
+          </div>
+          <%= image_tag('ex_pjt_detail_02.jpg', width: '100%') %>
+          <div class="detail-box-text">
+            <p class="leftText">表、裏のどちらの面でも接続できます。特にMicro-USBケーブルにおいて、表裏を確かめて充電する必要は一切なくなります。これからはなんとなくケーブルをスマホに近づけるだけでカンタンに充電できるようになります。</p>
+            <p class="leftText">このケーブルは充電だけでなく、<span class="bold leftText">データ転送にも対応しております。また、スイッチを押す事で「充電モード」と「データ転送モード」に切り替える事ができます。「充電モード」では「データ転送モード」のおよそ２倍のスピードで充電可能です</span>。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pjt-report" class="detail-section">
+        <div class="report-box">
+          <div class="report-box-header">
+            <div class="report-box-creator">
+              <%= image_tag('ex_hero_thumb.jpg') %>
+              <span>いいのべ</span>
+            </div>
+            <div class="report-box-datetime">
+              December 26th, 14:00
+            </div>
+            <div class="report-box-title">
+              出荷状況について
+            </div>
+          </div>
+          <div class="report-box-body">
+            <p>今日は。待ちにまった出荷日。</p>
+            <p>楽しみだよねー。</p>
+          </div>
+          <div class="report-box-footer">
+            <span class="btn btn-default btn-xs">f</span>
+            <span class="btn btn-default btn-xs">t</span>
+          </div>
+        </div>
+        <div class="report-box">
+          <div class="report-box-header">
+            <div class="report-box-creator">
+              <%= image_tag('ex_hero_thumb.jpg') %>
+              <span>いいのべ</span>
+            </div>
+            <div class="report-box-datetime">
+              December 10th, 12:00
+            </div>
+            <div class="report-box-title">
+              箱詰め作業について
+            </div>
+          </div>
+          <div class="report-box-body">
+            <p>箱詰め作業中だよ。</p>
+            <p>大変だなー。</p>
+          </div>
+          <div class="report-box-footer">
+            <span class="btn btn-default btn-xs">f</span>
+            <span class="btn btn-default btn-xs">t</span>
+          </div>
+        </div>
+        <div class="report-box">
+          <div class="report-box-header">
+            <div class="report-box-creator">
+              <%= image_tag('ex_hero_thumb.jpg') %>
+              <span>いいのべ</span>
+            </div>
+            <div class="report-box-datetime">
+              November 23th, 10:00
+            </div>
+            <div class="report-box-title">
+              製品制作状況について
+            </div>
+          </div>
+          <div class="report-box-body">
+            <p>今日は。現在絶賛制作中です。</p>
+            <p>楽しみに待っててね。</p>
+          </div>
+          <div class="report-box-footer">
+            <span class="btn btn-default btn-xs">f</span>
+            <span class="btn btn-default btn-xs">t</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="pjt-comment" class="detail-section">
+        <div class="comment-box">
+          <div class="comment-box-header">
+            <div class="comment-box-creator">
+              <%= image_tag('ex_user_thumb_01.png', width: '40px;') %>
+              <span>Hanako</span>
+            </div>
+            <div class="comment-box-datetime">
+              December 26th, 14:00
+            </div>
+          </div>
+          <div class="comment-box-body">
+            <p>頑張ってください。</p>
+          </div>
+          <div class="comment-box-footer">
+          </div>
+        </div>
+        <div class="comment-box">
+          <div class="comment-box-header">
+            <div class="comment-box-creator">
+              <%= image_tag('ex_user_thumb_02.jpg', width: '40px;') %>
+              <span>Jason</span>
+            </div>
+            <div class="comment-box-datetime">
+              December 20th, 04:00
+            </div>
+          </div>
+          <div class="comment-box-body">
+            <p>はよ作れや。はよ送れや。</p>
+          </div>
+          <div class="comment-box-footer">
+          </div>
+        </div>
+        <div class="comment-box">
+          <div class="comment-box-header">
+            <div class="comment-box-creator">
+              <%= image_tag('ex_user_thumb_03.png', width: '40px;') %>
+              <span>Ellie</span>
+            </div>
+            <div class="comment-box-datetime">
+              December 10th, 04:00
+            </div>
+          </div>
+          <div class="comment-box-body">
+            <p>幸せって、なんですか？</p>
+          </div>
+          <div class="comment-box-footer">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="btn-select-course">
+      <strong>Select a Course</strong>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pjt-creator">
+      <h2>Creator</h2>
+      <div class="pjt-creator-box">
+        <div class="pjt-creator-box-header">
+          <%= image_tag('ex_hero_thumb.jpg') %>
+          <span>いいのべ</span>
+        </div>
+        <div class="pjt-creator-box-body">
+          <p><%= link_to 'f: iinobe-fb', projects_detail_path %></p>
+          <p><%= link_to 't: iinobe-twitter', projects_detail_path %></p>
+        </div>
+        <div class="pjt-creator-box-footer">
+          <p><%= link_to 'Contact this creator', projects_detail_path %></p>
+        </div>
+      </div>
+    </div>
+    <div class="pjt-course">
+      <h2>Courses</h2>
+      <div class="pjt-course-box">
+        <div class="pjt-course-box-header">
+          <h3>Course of $30</h3>
+        </div>
+        <div class="pjt-course-box-body">
+          <div class="course-title">
+            <h2>Cable-A, B & C</h2>
+          </div>
+          <div class="course-picture">
+            <%= image_tag "ex_return_01.png"%>
+          </div>
+          <div class="course-description">
+            <p class="leftText">リターン選択の際は<span style="color:rgb(255, 0, 0)"><span class="bold leftText">まずは「合計個数」をお選び頂き</span></span><span class="bold leftText">、<span style="color:rgb(255, 0, 0)">次にお選び頂きました「合計個数」</span>になるよう、４製品からお好きな製品をお好きな個数お選びください。</span></p>
+            <p class="leftText"><span class="bold leftText">　1. Lightningマグネットケーブル　&times; a個</span></p>
+            <p class="leftText"><span class="bold leftText">　2. Lightningアダプタ　&times; b個</span></p>
+            <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
+            <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
+          </div>
+        </div>
+        <div class="pjt-course-box-footer">
+          <p><span class="glyphicon glyphicon-user">10 users have supported</span></p>
+          <p><span class="glyphicon glyphicon-briefcase">Will be shipped on March 2016</span></p>
+        </div>
+      </div>
+      <div class="pjt-course-box">
+        <div class="pjt-course-box-header">
+          <h3>Course of $50</h3>
+        </div>
+        <div class="pjt-course-box-body">
+          <div class="course-title">
+            <h2>Cable-A, B, C & D</h2>
+          </div>
+          <div class="course-picture">
+            <%= image_tag "ex_return_02.png"%>
+          </div>
+          <div class="course-description">
+            <p class="leftText">リターン選択の際は<span style="color:rgb(255, 0, 0)"><span class="bold leftText">まずは「合計個数」をお選び頂き</span></span><span class="bold leftText">、<span style="color:rgb(255, 0, 0)">次にお選び頂きました「合計個数」</span>になるよう、４製品からお好きな製品をお好きな個数お選びください。</span></p>
+            <p class="leftText"><span class="bold leftText">　1. Lightningマグネットケーブル　&times; a個</span></p>
+            <p class="leftText"><span class="bold leftText">　2. Lightningアダプタ　&times; b個</span></p>
+            <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
+            <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
+          </div>
+        </div>
+        <div class="pjt-course-box-footer">
+          <p><span class="glyphicon glyphicon-user">10 users have supported</span></p>
+          <p><span class="glyphicon glyphicon-briefcase">Will be shipped on March 2016</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
