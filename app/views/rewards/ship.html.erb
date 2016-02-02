@@ -1,0 +1,72 @@
+<% provide(:title, "Shipping Info") %>
+<div class="row" style="margin-top: 20px;">
+  <div class="col-md-12">
+    <%= render 'reward_nav', on_li: 'ship' %>
+    <section class="ship-info">
+      <div class="box-header">
+        <h3>Shipping Infomation</h3>
+        <small>Please see <%= link_to 'Privacy Policy', helps_aboutvvf_path %></small>
+      </div>
+      <div class="box-body">
+        <dl>
+          <dt>Name</dt>
+          <dd>
+            First Name<input type="text"></input>
+            Last Name<input type="text"></input>
+          </dd>
+          <dt>Gender</dt>
+          <dd>
+            <span>
+              <label for="men">
+                <input type="radio" name="gender" id="men" value="2">
+                <span>Male</span>
+              </label>
+              <label class="labelA mr0" for="women">
+                <input type="radio" name="gender" id="women" value="1">
+                <span>Female</span>
+              </label>
+            </span>
+          </dd>
+          <dt>TEL</dt>
+          <dd>
+            <input type="text"></input>
+          </dd>
+          <dt>Zip Code</dt>
+          <dd>
+            <input type="text"></input>
+          </dd>
+          <dt>Address 1</dt>
+          <dd>
+            <input type="text"></input>
+          </dd>
+          <dt>Address 2</dt>
+          <dd>
+            <input type="text"></input>
+          </dd>
+          <dt>Address 3</dt>
+          <dd>
+            <input type="text"></input>
+          </dd>
+          <dt>Nation</dt>
+          <dd>
+            <select name="nation" id="nation">
+              <option>Select Nation</option>
+              <option>Vietnum</option>
+              <option>Singapore</option>
+              <option>USA</option>
+              <option>Japan</option>
+            </select>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class="left-btn">
+        <%= link_to 'BACK', rewards_select_path %>
+      </div>
+      <div class="right-btn">
+        <%= link_to 'NEXT', rewards_confirm_path %>
+      </div>
+    </section>
+  </div>
+</div>

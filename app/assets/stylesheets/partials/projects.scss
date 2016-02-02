@@ -142,6 +142,10 @@ section.badge-success:after {
     font-size: 20px;
     padding-top: 20px;;
     cursor: pointer;
+    a {
+      color: $gray-dark;
+      text-decoration: none;
+    }
     &:hover {
       opacity: 0.5;
     }
@@ -208,6 +212,13 @@ section.badge-success:after {
   color: white;
   text-align: center;
   font-size: 25px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
   strong {
     position: relative;
     top: 7px;
@@ -237,3 +248,23 @@ section.badge-success:after {
     background: white;
   }
 }
+
+.pjt-course-box-footer {
+  width: 100%;
+  background-color: orange;
+  text-align: center;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+ .creator-info {
+   margin: 10px;
+   padding: 10px;
+   border: solid 1px $gray;
+   border-radius: 4px;
+ }

@@ -4,4 +4,7 @@ class ProjectsController < ApplicationController
 
   def detail
   end
+
+  def creator
+  end
 end

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'projects/index'
-
-  get 'projects/detail'
-
   scope "(:locale)" do
     root 'main#index'
     get 'helps/aboutvvf'
@@ -13,6 +9,17 @@ Rails.application.routes.draw do
     get 'helps/faqs'
     get 'news/index'
     get 'news/detail'
+    get 'projects/index'
+    get 'projects/detail'
+    get 'projects/creator'
+    get 'rewards/select'
+    get 'rewards/ship'
+    get 'rewards/confirm'
+    get 'rewards/complete'
+    get 'members/index'
+    get 'members/favorite'
+    get 'members/supported'
+    get 'members/posted'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,162 @@
+// Place all the styles related to the Rewards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reward-nav {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto 30px auto;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  line-height: 39px;
+  font-size: 12px;
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    li {
+      float: left;
+      width: 25%;
+      text-align: center;
+      border-right: 1px solid #d9d9d9;
+      position: relative;
+    }
+    li.on {
+      color: #05a1c6;
+      &:after {
+        content: "";
+        background: #4fc1e9;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+      }
+    }
+  }
+}
+
+.select-reward {
+  width: 100%;
+  margin: 0 auto 33px auto;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  border-bottom: 2px solid #e7e7e7;
+  .box-header {
+    background: #fcfcfc;
+    border-bottom: 1px solid #ededed;
+    padding: 22px 30px 20px 30px;
+  }
+  .box-body {
+    position: relative;
+    height: 350px;
+    padding: 30px;
+    .box-body-left {
+      position: absolute;
+      width: 280px;
+    }
+    .box-body-right {
+      position: absolute;
+      left: 340px;
+    }
+  }
+}
+
+.select-payment {
+  width: 100%;
+  margin: 0 auto 33px auto;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  border-bottom: 2px solid #e7e7e7;
+  .box-header {
+    background: #fcfcfc;
+    border-bottom: 1px solid #ededed;
+    padding: 22px 30px 20px 30px;
+  }
+  .box-body {
+    position: relative;
+    height: 350px;
+    padding: 30px;
+    ul {
+      width: 750px;
+      height: 200px;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+      margin: auto;
+      padding-left: 0px;
+      text-align: center;
+      list-style: none;
+      li {
+        width: 50%;
+        height: 100%;
+        display: block;
+        float: left;
+        border-right: 1px solid #d9d9d9;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          border: 5px groove $gray-lighter;
+        }
+        &.active {
+          border: 3px groove $gray-lighter;
+        }
+      }
+    }
+  }
+}
+
+.ship-info {
+  width: 100%;
+  margin: 0 auto 33px auto;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  border-bottom: 2px solid #e7e7e7;
+  .box-header {
+    background: #fcfcfc;
+    border-bottom: 1px solid #ededed;
+    padding: 22px 30px 20px 30px;
+  }
+  .box-body {
+    position: relative;
+    padding: 30px;
+  }
+}
+
+.action-btn {
+  width: 100%;
+  height: 80px;
+  .left-btn {
+    position: absolute;
+    width: 250px;
+    height: 48px;
+    left: 15px;
+    background: #c8c8c8;
+    border-radius: 4px;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: white;
+      text-align: center;
+      padding-top: 10px;
+      text-decoration: none;
+    }
+  }
+  .right-btn {
+    position: absolute;
+    width: 250px;
+    height: 48px;
+    right: 15px;
+    background: #4fc1e9;
+    border-radius: 4px;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: white;
+      text-align: center;
+      padding-top: 10px;
+      text-decoration: none;
+    }
+  }
+}

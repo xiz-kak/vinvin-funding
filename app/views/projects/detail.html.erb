@@ -46,7 +46,9 @@
             </dl>
           </div>
           <div class="pjt-hero-right-05">
-            <strong>Select a Course</strong>
+            <%= link_to '#pjt-course' do %>
+              <strong>Select a Course</strong>
+            <% end %>
           </div>
         </div>
       </section>
@@ -216,7 +218,9 @@
       </section>
     </div>
     <div class="btn-select-course">
-      <strong>Select a Course</strong>
+      <%= link_to '#pjt-course' do %>
+        <strong>Select a Course</strong>
+      <% end %>
     </div>
   </div>
   <div class="col-md-4">
@@ -224,8 +228,10 @@
       <h2>Creator</h2>
       <div class="pjt-creator-box">
         <div class="pjt-creator-box-header">
-          <%= image_tag('ex_hero_thumb.jpg') %>
-          <span>いいのべ</span>
+          <%= link_to projects_creator_path do %>
+            <%= image_tag('ex_hero_thumb.jpg') %>
+            <span>いいのべ</span>
+          <% end %>
         </div>
         <div class="pjt-creator-box-body">
           <p><%= link_to 'f: iinobe-fb', projects_detail_path %></p>
@@ -236,7 +242,7 @@
         </div>
       </div>
     </div>
-    <div class="pjt-course">
+    <div id="pjt-course" class="pjt-course">
       <h2>Courses</h2>
       <div class="pjt-course-box">
         <div class="pjt-course-box-header">
@@ -256,10 +262,12 @@
             <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
             <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
           </div>
+          <hr></hr>
+          <p><span class="glyphicon glyphicon-briefcase">Estimated delivery: March 2016</span></p>
+          <p><span class="glyphicon glyphicon-globe">Ships to: Anywhere in the world</span></p>
         </div>
         <div class="pjt-course-box-footer">
-          <p><span class="glyphicon glyphicon-user">10 users have supported</span></p>
-          <p><span class="glyphicon glyphicon-briefcase">Will be shipped on March 2016</span></p>
+          <%= link_to 'SELECT', rewards_select_path %>
         </div>
       </div>
       <div class="pjt-course-box">
@@ -280,10 +288,12 @@
             <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
             <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
           </div>
+          <hr></hr>
+          <p><span class="glyphicon glyphicon-briefcase">Estimated delivery: March 2016</span></p>
+          <p><span class="glyphicon glyphicon-globe">Ships to: Anywhere in the world</span></p>
         </div>
         <div class="pjt-course-box-footer">
-          <p><span class="glyphicon glyphicon-user">10 users have supported</span></p>
-          <p><span class="glyphicon glyphicon-briefcase">Will be shipped on March 2016</span></p>
+          <%= link_to 'SELECT', rewards_select_path %>
         </div>
       </div>
     </div>

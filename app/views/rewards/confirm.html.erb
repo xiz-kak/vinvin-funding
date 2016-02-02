@@ -1,0 +1,42 @@
+<% provide(:title, "Confirmation") %>
+<div class="row" style="margin-top: 20px;">
+  <div class="col-md-12">
+    <%= render 'reward_nav', on_li: 'confirm' %>
+    <section class="ship-info">
+      <div class="box-header">
+        <h3>Confirmation</h3>
+      </div>
+      <div class="box-body">
+        <dl>
+          <dt>Pledge Amount</dt>
+          <dd>
+            <h3>Course of $30</h3>
+          </dd>
+          <dt>Reward</dt>
+          <dd>
+            <h3>Cable A, B & C</h3>
+            <span>Estimated Delivery: March, 2016</span>
+          </dd>
+          <dt>Shipping Address</dt>
+          <dd>
+            <span>ABC Building 302</span><br>
+            <span>Defgh city, Ijklmn County</span><br>
+            <span>Opqrs State, Vietnum 1234 56</span><br>
+          </dd>
+          <dt>Payment Method</dt>
+          <dd>
+            <%= image_tag 'paypal-logo.jpg' %>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class="left-btn">
+        <%= link_to 'BACK', rewards_ship_path %>
+      </div>
+      <div class="right-btn">
+        <%= link_to 'NEXT', rewards_complete_path, data: {confirm: 'Flying to Payment site'} %>
+      </div>
+    </section>
+  </div>
+</div>

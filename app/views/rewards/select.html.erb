@@ -1,0 +1,47 @@
+<% provide(:title, "Select") %>
+<div class="row" style="margin-top: 20px;">
+  <div class="col-md-12">
+    <%= render 'reward_nav', on_li: 'select' %>
+    <section class="select-reward">
+      <div class="box-header">
+        <h3>Reward<h3>
+        <small><%= link_to 'Change', projects_detail_path %></small>
+      </div>
+      <div class="box-body">
+        <div class="box-body-left">
+          <%= image_tag 'ex_return_01.png' %>
+        </div>
+        <div class="box-body-right">
+          <h2>Course of $30</h2>
+          <h3>Cable-A, B & C</h3>
+          <div class="course-description">
+            <p class="leftText">リターン選択の際は<span style="color:rgb(255, 0, 0)"><span class="bold leftText">まずは「合計個数」をお選び頂き</span></span><span class="bold leftText">、<span style="color:rgb(255, 0, 0)">次にお選び頂きました「合計個数」</span>になるよう、４製品からお好きな製品をお好きな個数お選びください。</span></p>
+            <p class="leftText"><span class="bold leftText">　1. Lightningマグネットケーブル　&times; a個</span></p>
+            <p class="leftText"><span class="bold leftText">　2. Lightningアダプタ　&times; b個</span></p>
+            <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
+            <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="select-payment">
+      <div class="box-header">
+        <h3>Payment Method</h3>
+        <small>Please see <%= link_to 'help', helps_aboutpayment_path %></small>
+      </div>
+      <div class="box-body">
+        <ul>
+          <li class="active"><%= image_tag 'paypal-logo.jpg', size: '290x180' %></li>
+          <li><%= image_tag 'payoneer_logo.png' %></li>
+        </ul>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class=left-btn"">
+      </div>
+      <div class="right-btn">
+        <%= link_to 'NEXT', rewards_ship_path %>
+      </div>
+    </section>
+  </div>
+</div>
