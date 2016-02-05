@@ -1,0 +1,60 @@
+// Place all the styles related to the Mypage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message-left {
+  border: 1px solid $gray-lighter;
+  margin: 5px;
+  padding: 5px;
+  .message-title-box {
+    background: $gray-lighter;
+    border: 2px solid $gray-lighter;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid $gray-light;
+    }
+    .message-title-box-header {
+      height: 70px;
+      padding: 5px;
+    }
+    .message-title-box-body {
+      height: 80px;
+      padding: 5px;
+      background: white;
+      border-radius: 2px;
+    }
+  }
+}
+
+.message-right {
+  border: 1px solid $gray-lighter;
+  margin: 5px;
+  padding: 5px;
+  .message-body {
+    height: 400px;
+    .message-body-box {
+      margin: 10px 5px 5px 5px;
+      overflow: auto;
+      .message-body-box-header {
+        height: 50px;
+        padding: 5px;
+      }
+      .message-body-box-body {
+        padding: 5px;
+      }
+    }
+  }
+  .message-new {
+    height: 200px;
+    border: 1px solid $gray-lighter;
+    padding: 5px;
+    textarea {
+      width: 100%;
+      height: 150px;
+      border: 1px solid $gray-light;
+    }
+  }
+}

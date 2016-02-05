@@ -1,0 +1,180 @@
+<% provide(:title, "Analytics") %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="general-stats-area">
+        <div class="unit-select">
+          <ul class="nav nav-tabs">
+            <li><a href="#">Hourly</a></li>
+            <li class="active"><a href="#">Daily</a></li>
+            <li><a href="#">Weekly</a></li>
+            <li><a href="#">Monthly</a></li>
+          </ul>
+        </div>
+        <canvas id="general-stats-chart"></canvas>
+        <div class="general-stats-values">
+          <dl>
+            <dt>Pledged Amount</dt>
+            <dd>$3,430</dd>
+            <dt># of Supporterd</dt>
+            <dd>354</dd>
+            <dt>Page Views</dt>
+            <dd>4,593pv</dd>
+            <dt>CVR</dt>
+            <dd>25.3%</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="gender-stats-area col-md-6">
+        <h3>Gender Statistics</h3>
+        <div class="gender-meter">
+        </div>
+        <div class="gender-chart">
+          <table class="table">
+            <tr>
+              <th class="center" colspan="3">Male </th>
+              <th class="center" colspan="3">Female </th>
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td>Count</td>
+              <td>Ratio</td>
+              <td>Age</td>
+              <td>Count</td>
+              <td>Ratio</td>
+            </tr>
+            <tr>
+              <td>20's</td>
+              <td>10</td>
+              <td>15%</td>
+              <td>20's</td>
+              <td>8</td>
+              <td>11%</td>
+            </tr>
+            <tr>
+              <td>30's</td>
+              <td>10</td>
+              <td>15%</td>
+              <td>30's</td>
+              <td>8</td>
+              <td>11%</td>
+            </tr>
+            <tr>
+              <td>40's</td>
+              <td>10</td>
+              <td>15%</td>
+              <td>40's</td>
+              <td>8</td>
+              <td>11%</td>
+            </tr>
+            <tr>
+              <td>50's</td>
+              <td>10</td>
+              <td>15%</td>
+              <td>50's</td>
+              <td>8</td>
+              <td>11%</td>
+            </tr>
+            <tr>
+              <td>60's</td>
+              <td>10</td>
+              <td>15%</td>
+              <td>60's</td>
+              <td>8</td>
+              <td>11%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="payment-stats-area col-md-6">
+        <h3>Payment Statistics</h3>
+        <canvas id="payment-stats-chart"></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="nation-stats-area col-md-6">
+        <h3>Nation of Supporters</h3>
+        <table class="table">
+          <tr>
+            <td>Japan</td>
+            <td>50</td>
+            <td>28%</td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>20</td>
+            <td>15%</td>
+          </tr>
+          <tr>
+            <td>UK</td>
+            <td>5</td>
+            <td>3%</td>
+          </tr>
+          <tr>
+            <td>Vietnam</td>
+            <td>130</td>
+            <td>45%</td>
+          </tr>
+          <tr>
+            <td>Korea</td>
+            <td>4</td>
+            <td>2%</td>
+          </tr>
+          <tr>
+            <td>China</td>
+            <td>30</td>
+            <td>5%</td>
+          </tr>
+        </table>
+      </div>
+      <div class="site-stats-area col-md-6">
+        <h3>Payment Statistics</h3>
+        <canvas id="site-stats-chart"></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="device-stats-area col-md-6">
+        <h3>Device Statistics</h3>
+        <dl>
+          <dt>PC</dt>
+          <dd>350(20%)</dd>
+          <dt>Smartphone</dt>
+          <dd>1050(60%)</dd>
+          <dt>Other</dt>
+          <dd>350(20%)</dd>
+        </dl>
+      </div>
+      <div class="occupation-stats-area col-md-6">
+        <h3>Occupation of Supporters</h3>
+        <table class="table">
+          <tr>
+            <td>Sales Representative</td>
+            <td>345</td>
+            <td>5%</td>
+          </tr>
+          <tr>
+            <td>Engineer</td>
+            <td>534</td>
+            <td>35%</td>
+          </tr>
+          <tr>
+            <td>Factory Worker</td>
+            <td>1,345</td>
+            <td>35%</td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td>2,345</td>
+            <td>63%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,79 @@
+// Place all the styles related to the Apply controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.apply-hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: -30px;
+    left: 60px;
+  }
+  .msg {
+    position: absolute;
+    width: 1024px;
+    height: 150px;
+    top: 350px;
+    left: 60px;
+    background: $gray;
+    opacity: 0.6;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.apply-nav {
+  width: 100%;
+  height: 40px;
+  margin: 20px auto 30px auto;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  line-height: 39px;
+  font-size: 12px;
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    li {
+      float: left;
+      width: 16.6%;
+      text-align: center;
+      position: relative;
+      &:not(:last-child) {
+        border-right: 1px solid #d9d9d9;
+      }
+    }
+    li.on {
+      color: #05a1c6;
+      &:after {
+        content: "";
+        background: #4fc1e9;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+      }
+    }
+  }
+}
+
+.apply-box {
+  width: 100%;
+  margin: 0 auto 33px auto;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  border-bottom: 2px solid #e7e7e7;
+  .box-header {
+    background: #fcfcfc;
+    border-bottom: 1px solid #ededed;
+    padding: 22px 30px 20px 30px;
+  }
+  .box-body {
+    position: relative;
+    padding: 30px;
+  }
+}

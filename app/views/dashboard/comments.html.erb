@@ -1,0 +1,57 @@
+<% provide(:title, "Analytics") %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Comments</h2>
+    <div class="btn btn-primary">New Post</div>
+    <div class="comment-area">
+      <div class="comment-box">
+        <div class="comment-box-header">
+          <div class="comment-box-creator">
+            <%= image_tag('ex_user_thumb_01.png', size: '50x50') %>
+            <span>Noppy</span>
+          </div>
+          <div class="comment-box-datetime">
+            December 26th, 14:00
+          </div>
+        </div>
+        <div class="comment-box-body">
+          <p>頑張ってください。応援してます！</p>
+        </div>
+        <div class="comment-box-reply">
+          <p>サンキュー</p>
+        </div>
+        <div class="commen-box-footer">
+          <div class="btn btn-default btn-xs">Reply</div>
+        </div>
+      </div>
+
+      <div class="comment-box">
+        <div class="comment-box-header">
+          <div class="comment-box-creator">
+            <%= image_tag('ex_hero_thumb.jpg', size: '50x50') %>
+            <span>Iinabe</span>
+          </div>
+          <div class="comment-box-datetime">
+            January 25th, 14:00
+          </div>
+        </div>
+        <div class="comment-box-body">
+          <p>自分投稿分はRemoveできる。</p>
+        </div>
+        <div class="commen-box-footer">
+          <div class="btn btn-default btn-xs">Reply</div>
+          <div class="btn btn-default btn-xs">Remove</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="comment-reply-area">
+      <div><textarea>"Reply"クリックで表示</textarea></div>
+      <div class="btn btn-default">Cancel</div>
+      <div class="btn btn-primary">Reply</div>
+    </div>
+  </div>
+</div>

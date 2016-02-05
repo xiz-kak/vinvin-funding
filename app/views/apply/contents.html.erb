@@ -1,0 +1,64 @@
+<% provide(:title, "Project Details") %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="apply-title">
+      <%= render 'apply_nav', on_li: 'contents' %>
+    </div>
+    <section class="apply-box">
+      <div class="box-header">
+        <h3>Project Details<h3>
+        <small><%= link_to 'Help', helps_aboutvvf_path %></small>
+      </div>
+      <div class="box-body">
+        <section class="creator-description">
+          <h4>Creator Description</h4>
+          <dl>
+            <dt>Name</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Description</dt>
+            <dd>
+              <textarea></textarea>
+            </dd>
+            <dt>Image</dt>
+            <dd>
+              <input type="file"></input>
+            </dd>
+          </dl>
+        </section>
+        <hr>
+        <section class="project-description">
+          <h4>Project Description</h4>
+          <dl>
+            <dt>Title</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Image</dt>
+            <dd>
+              <input type="file"></input>
+              <input type="file"></input>
+              <input type="file"></input>
+              <input type="file"></input>
+              <input type="file"></input>
+            </dd>
+            <dt>Description</dt>
+            <dd>
+              <textarea></textarea>
+            </dd>
+          </dl>
+          <div class="btn btn-warning">Add Description <span class="glyphicon glyphicon-plus"></span></div>
+        </section>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class="left-btn">
+        <%= link_to 'BACK', apply_basic_path%>
+      </div>
+      <div class="right-btn">
+        <%= link_to 'NEXT', apply_rewards_path %>
+      </div>
+    </section>
+  </div>
+</div>

@@ -18,8 +18,10 @@
       float: left;
       width: 25%;
       text-align: center;
-      border-right: 1px solid #d9d9d9;
       position: relative;
+      &:not(:last-child) {
+        border-right: 1px solid #d9d9d9;
+      }
     }
     li.on {
       color: #05a1c6;

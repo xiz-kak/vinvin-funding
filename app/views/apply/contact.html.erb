@@ -1,0 +1,65 @@
+<% provide(:title, "Contact Info") %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="apply-title">
+      <%= render 'apply_nav', on_li: 'contact' %>
+    </div>
+    <section class="apply-box">
+      <div class="box-header">
+        <h3>Contact Information</h3>
+        <small><%= link_to 'Help', helps_aboutvvf_path %></small>
+      </div>
+      <div class="box-body">
+        <section class="contact-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>
+              First Name: <input type="text"></input>
+              Last Name: <input type="text"></input>
+            </dd>
+            <dt>Email</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>TEL</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Nation</dt>
+            <dd>
+              <select>
+                <option>United States</option>
+                <option>Vietnam</option>
+                <option>Japan</option>
+              </select>
+            </dd>
+            <dt>Zip Code</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Address1</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Address2</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Address3</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+          </dl>
+        </section>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class="left-btn">
+        <%= link_to 'BACK', apply_rewards_path%>
+      </div>
+      <div class="right-btn">
+        <%= link_to 'NEXT', apply_preview_path %>
+      </div>
+    </section>
+  </div>
+</div>

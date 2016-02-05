@@ -1,0 +1,71 @@
+<% provide(:title, "Reports") %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Reports</h2>
+    <div class="btn btn-primary">New Report</div>
+    <div class="report-area">
+      <div class="report-box">
+        <div class="report-box-header">
+          <div class="report-box-creator">
+            <%= image_tag('ex_hero_thumb.jpg') %>
+            <span>いいのべ</span>
+          </div>
+          <div class="report-box-datetime">
+            December 26th, 14:00
+          </div>
+          <div class="report-box-title">
+            出荷状況について
+            <kbd>Draft</kbd>
+          </div>
+        </div>
+        <div class="report-box-body">
+          <p>今日は。待ちにまった出荷日。</p>
+          <p>楽しみだよねー。</p>
+        </div>
+        <div class="report-box-footer">
+          <span class="btn btn-default btn-xs">f</span>
+          <span class="btn btn-default btn-xs">t</span>
+          <span class="btn btn-default btn-xs pull-right">Edit</span>
+          <span class="btn btn-default btn-xs pull-right">Delete</span>
+        </div>
+      </div>
+      <div class="report-box">
+        <div class="report-box-header">
+          <div class="report-box-creator">
+            <%= image_tag('ex_hero_thumb.jpg') %>
+            <span>いいのべ</span>
+          </div>
+          <div class="report-box-datetime">
+            December 26th, 14:00
+          </div>
+          <div class="report-box-title">
+            出荷状況について
+          </div>
+        </div>
+        <div class="report-box-body">
+          <p>今日は。待ちにまった出荷日。</p>
+          <p>楽しみだよねー。</p>
+        </div>
+        <div class="report-box-footer">
+          <span class="btn btn-default btn-xs">f</span>
+          <span class="btn btn-default btn-xs">t</span>
+        </div>
+      </div>
+    </div>
+    <div class="new-report">
+      <dl>
+        <dt>Title<dt>
+        <dd><input type="text" value="New PostかEditクリックで表示"></dd>
+        <dt>Text<dt>
+        <dd><textarea></textarea></dd>
+        <dt>File<dt>
+        <dd><input type="file"></dd>
+      </dl>
+      <div class="btn btn-default btn-sm">Save</div>
+      <div class="btn btn-primary btn-sm">Post</div>
+    </div>
+  </div>
+</div>

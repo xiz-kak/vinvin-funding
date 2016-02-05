@@ -1,0 +1,81 @@
+<% provide(:title, "Mail Settings") %>
+<div class="row">
+  <div class="col-md-3">
+    <p style="margin: 30px;">
+      <%= image_tag 'ex_user_thumb_01.png' %>
+      <%= link_to 'Sam Smith', mypage_index_path %>
+    </p>
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Mail Setting</h2>
+    <dl>
+      <dt>News Letter</dt>
+      <dd>
+        <span>
+          <label for="nl-receive">
+            <input type="radio" name="news-letter" id="nl-receive" value="1">
+            <span>Receive</span>
+          </label>
+          <label for="nl-not-receive">
+            <input type="radio" name="news-letter" id="nl-not-receive" value="0">
+            <span>Not receive</span>
+          </label>
+        </span>
+      </dd>
+      <dt>Project Report</dt>
+      <dd>
+        <span>
+          <label for="pr-receive">
+            <input type="radio" name="project-report" id="pr-receive" value="1">
+            <span>Receive</span>
+          </label>
+          <label for="pr-not-receive">
+            <input type="radio" name="project-report" id="pr-not-receive" value="0">
+            <span>Not receive</span>
+          </label>
+        </span>
+      </dd>
+      <dt>Message</dt>
+      <dd>
+        <span>
+          <label for="msg-receive">
+            <input type="radio" name="message" id="msg-receive" value="1">
+            <span>Receive</span>
+          </label>
+          <label for="msg-not-receive">
+            <input type="radio" name="message" id="msg-not-receive" value="0">
+            <span>Not receive</span>
+          </label>
+        </span>
+      </dd>
+      <dt>VVF News</dt>
+      <dd>
+        <span>
+          <label for="vn-receive">
+            <input type="radio" name="vvf-news" id="vn-receive" value="1">
+            <span>Receive</span>
+          </label>
+          <label for="vn-not-receive">
+            <input type="radio" name="vvf-news" id="vn-not-receive" value="0">
+            <span>Not receive</span>
+          </label>
+        </span>
+      </dd>
+      <dt>Support</dt>
+      <dd>
+        <span>
+          <label for="sp-receive">
+            <input type="radio" name="support" id="sp-receive" value="1">
+            <span>Receive</span>
+          </label>
+          <label for="sp-not-receive">
+            <input type="radio" name="support" id="sp-not-receive" value="0">
+            <span>Not receive</span>
+          </label>
+        </span>
+      </dd>
+    </dl>
+    <div class="btn btn-primary">Update</div>
+  </div>
+</div>

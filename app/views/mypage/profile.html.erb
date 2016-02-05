@@ -1,0 +1,44 @@
+<% provide(:title, "#{params[:action].capitalize} Projects") %>
+<div class="row">
+  <div class="col-md-3">
+    <p style="margin: 30px;">
+      <%= image_tag 'ex_user_thumb_01.png' %>
+      <%= link_to 'Sam Smith', mypage_index_path %>
+    </p>
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Edit Profile</h2>
+    <dl>
+      <dt>Name</dt>
+      <dd>Keidai</dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>Image</dt>
+      <dd><%= image_tag 'ex_user_thumb_01.png'%></dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>EMail</dt>
+      <dd>abc.def@ghi.com</dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>URL</dt>
+      <dd>
+        <%= link_to 'facebook', 'https://www.facebook.com' %>
+        <%= link_to 'twitter', 'https://www.twitter.com' %>
+        <%= link_to 'HP', 'http://www.jepco.org' %>
+      </dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>Location</dt>
+      <dd>Hoge Poge, Vietnam</dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>Birthday</dt>
+      <dd>December 28, 1986</dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>Gender</dt>
+      <dd>Male</dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+      <dt>Self Description</dt>
+      <dd>I am Keidai desu.</dd>
+      <dd><%= link_to 'Edit', mypage_profile_path %></dd>
+    </dl>
+    <h3><%= link_to 'Withdrawal', mypage_withdraw_path %></h3>
+  </div>
+</div>

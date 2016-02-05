@@ -1,0 +1,54 @@
+<% provide(:title, "Rewards") %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="apply-title">
+      <%= render 'apply_nav', on_li: 'rewards' %>
+    </div>
+    <section class="apply-box">
+      <div class="box-header">
+        <h3>Rewards<h3>
+        <small><%= link_to 'Help', helps_aboutvvf_path %></small>
+      </div>
+      <div class="box-body">
+        <section class="reward-description">
+          <h4>Reward Description</h4>
+          <dl>
+            <dt>Reward Amount</dt>
+            <dd>
+              <input type="text" placeholder="$30"></input>
+            </dd>
+            <dt>Reward Title</dt>
+            <dd>
+              <input type="text" placeholder="Cable A, B & C"></input>
+            </dd>
+            <dt>Description</dt>
+            <dd>
+              <textarea></textarea>
+            </dd>
+            <dt>Estimated Delivery</dt>
+            <dd>
+              <input type="text" placeholder="yyyy/mm/dd"></input>
+            </dd>
+            <dt>Limit Count</dt>
+            <dd>
+              <input type="text"></input>
+            </dd>
+            <dt>Image</dt>
+            <dd>
+              <input type="file"></input>
+            </dd>
+          </dl>
+          <div class="btn btn-warning">Add Reward <span class="glyphicon glyphicon-plus"></span></div>
+        </section>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class="left-btn">
+        <%= link_to 'BACK', apply_contents_path%>
+      </div>
+      <div class="right-btn">
+        <%= link_to 'NEXT', apply_contact_path %>
+      </div>
+    </section>
+  </div>
+</div>

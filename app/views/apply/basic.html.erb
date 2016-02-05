@@ -1,0 +1,51 @@
+<% provide(:title, "Basic Info") %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="apply-title">
+      <%= render 'apply_nav', on_li: 'basic' %>
+    </div>
+    <section class="apply-box">
+      <div class="box-header">
+        <h3>Basic Information<h3>
+        <small><%= link_to 'Help', helps_aboutvvf_path %></small>
+      </div>
+      <div class="box-body">
+        <dl>
+          <dt>Project Type</dt>
+          <dd>
+            <select name="type" id="type">
+              <option>Purchase</option>
+              <option>Investment</option>
+              <option>Donation</option>
+            </select>
+          </dd>
+          <dt>Category</dt>
+          <dd>
+            <select name="type" id="type">
+              <option>Product</option>
+              <option>Art</option>
+              <option>Sports</option>
+            </select>
+          </dd>
+          <dt>Project Title</dt>
+          <dd>
+            <input type="text"></input>
+          </dd>
+          <dt>Goal</dt>
+          <dd>
+            <input type="text" placeholder="$15,000"></input>
+          </dd>
+          <dt>Project End Date</dt>
+          <dd>
+            <input type="text" placeholder="yyyy/mm/dd"></input>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section class="action-btn">
+      <div class="right-btn">
+        <%= link_to 'NEXT', apply_contents_path %>
+      </div>
+    </section>
+  </div>
+</div>

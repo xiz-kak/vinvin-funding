@@ -1,0 +1,44 @@
+---
+ja:
+  header:
+    search: "探す"
+    begin: "始める"
+    about_vvf: "VVFについて"
+    login: "Login"
+    logout: "Logout"
+    register: "登録"
+    news: "News"
+    help: "Help"
+    mypage: "My Page"
+  footer:
+    faqs: "FAQs"
+  helps:
+    sidemenu:
+      what_is_vvf: " Vin-Vin Fundingとは?"
+      creators_guide: "実行者ガイド"
+      how_to_create: "始め方"
+      supporters_guide: "支援者ガイド"
+      how_to_support: "支援について"
+      about_payment: "支払いについて"
+      faqs: "FAQs"
+      about_vvf: "Vin-Vin Fundingについて"
+      creator_questions: "実行者向け"
+      supporter_questions: "支援者向け"
+  main:
+    recommended: "おすすめ"
+    ranking: "ランキング"
+    pledged_ranking: "支援金額ランキング"
+    return_ranking: "人気リターン"
+    new_projects: "新しい！！"
+    success_projects: "目標達成！！"
+  news:
+    vvf_news: "Vin-Vin Fundingからのお知らせ"
+  projects:
+    search_pjt: "プロジェクトを探す"
+    open: "実行中プロジェクト"
+    last_minute: "締め切り間近のプロジェクト"
+    new: "新しいプロジェクト"
+    big: "支援金額が多いプロジェクト"
+    final_push: "後もう一歩のプロジェクト"
+    list: "プロジェクト一覧"
+    search_by_ctgr: "カテゴリー"

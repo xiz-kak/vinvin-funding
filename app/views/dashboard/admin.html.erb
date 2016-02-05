@@ -1,0 +1,56 @@
+<% provide(:title, "Admin Setting") %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Admin Setting</h2>
+    <div class="btn btn-primary">Add Admin</div>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td><%= image_tag('ex_user_thumb_01.png', size: '70x70') %></td>
+        <td>Sam Smith</td>
+        <td>Creator</td>
+        <td>--</td>
+      </tr>
+      <tr>
+        <td><%= image_tag('ex_user_thumb_02.jpg', size: '70x70') %></td>
+        <td>Iron Man</td>
+        <td>Admin</td>
+        <td><div class="btn btn-default btn-sm">Remove</div></td>
+      </tr>
+    </table>
+    <div>
+      <p>Add Adminクリックで以下を表示</p>
+      <table>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td><%= image_tag('ex_user_thumb_01.png', size: '70x70') %></td>
+          <td>Adam Smith</td>
+          <td><div class="btn btn-primary btn-sm">Add</div></td>
+        </tr>
+        <tr>
+          <td><%= image_tag('ex_user_thumb_03.png', size: '70x70') %></td>
+          <td>No Name Man</td>
+          <td><div class="btn btn-primary btn-sm">Add</div></td>
+        </tr>
+        <tr>
+          <td><%= image_tag('ex_user_thumb_01.png', size: '70x70') %></td>
+          <td>Yamada Ellie</td>
+          <td><div class="btn btn-primary btn-sm">Add</div></td>
+        </tr>
+      </table>
+      <div class="btn btn-default">Close</div>
+    </div>
+  </div>
+</div>

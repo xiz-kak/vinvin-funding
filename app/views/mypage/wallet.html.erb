@@ -1,0 +1,27 @@
+<% provide(:title, "Wallet Settings") %>
+<div class="row">
+  <div class="col-md-3">
+    <p style="margin: 30px;">
+      <%= image_tag 'ex_user_thumb_01.png' %>
+      <%= link_to 'Sam Smith', mypage_index_path %>
+    </p>
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Wallet Setting</h2>
+    <dl>
+      <dt>PayPal</dt>
+      <dd><input type="text"></dd>
+      <dd>
+        <div class="btn btn-primary btn-sm">UPDATE</div>
+        <div class="btn btn-warning btn-sm">REMOVE</div>
+      </dd>
+      <dt>Payoneer</dt>
+      <dd><input type="text"></dd>
+      <dd>
+        <div class="btn btn-primary btn-sm">UPDATE</div>
+        <div class="btn btn-warning btn-sm">REMOVE</div>
+      </dd>
+    </dl>
+  </div>
+</div>

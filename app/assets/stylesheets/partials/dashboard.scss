@@ -1,0 +1,21 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-box {
+  margin: 30px 0px;
+  border: solid 1px $gray;
+  border-radius: 4px;
+  padding: 5px;
+  .comment-box-body {
+    border: solid 1px $gray-lighter;
+    background: white;
+  }
+  .comment-box-reply {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border: solid 1px $gray-lighter;
+    background: white;
+  }
+}

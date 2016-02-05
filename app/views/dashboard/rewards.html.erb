@@ -1,0 +1,58 @@
+<% provide(:title, "Rewards") %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Rewards</h2>
+    <div class="btn btn-primary">Add Reward</div>
+    <table>
+      <tr>
+        <th>Price</th>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Detail</th>
+        <th>Limit count</th>
+        <th># of supporters</th>
+        <th>Estimated delivery</th>
+        <th>Available region</th>
+      </tr>
+      <tr>
+        <td>$30</td>
+        <td>Cable A, B & C</td>
+        <td><%= image_tag('ex_return_01.png', size: '100x90') %></td>
+        <td>あれとこれとそれがつきます。お得です。</td>
+        <td>100</td>
+        <td>75</td>
+        <td>May, 2016</td>
+        <td>Asia, North America</td>
+      </tr>
+      <tr>
+        <td>repeat</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <dl>
+      <dt>Price</dt>
+      <dd><input type="text"></dd>
+      <dt>Title</dt>
+      <dd><input type="text"></dd>
+      <dt>Description</dt>
+      <dd><textarea></textarea></dd>
+      <dt>Estimated Delivery</dt>
+      <dd><input type="text"/>年<input type="text"/>月</dd>
+      <dt>Limit count</dt>
+      <dd><input type="text"></dd>
+      <dt>File</dt>
+      <dd><input type="file"></dd>
+    </dl>
+    <div class="btn btn-default">Cancel</div>
+    <div class="btn btn-primary">Apply</div>
+  </div>
+</div>

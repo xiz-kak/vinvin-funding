@@ -1,0 +1,23 @@
+<% provide(:title, "Notifications") %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9">
+    <h2>Notifications</h2>
+    <table class="table">
+      <tr>
+        <td>2015/12/01</td>
+        <td>
+          <%= link_to dashboard_notifications_detail_path do %>
+            <h3>[IMPORTANT]System unavailable for maintenance.</h3>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td>repeat 10, with pagination</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -192,6 +192,7 @@ section.badge-success:after {
   border-radius: 4px;
   padding: 5px;
   .report-box-body {
+    border: solid 1px $gray-lighter;
     background: white;
   }
 }

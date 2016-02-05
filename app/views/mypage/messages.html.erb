@@ -1,0 +1,70 @@
+<% provide(:title, "Messages") %>
+<div class="row">
+  <div class="col-md-3">
+    <p style="margin: 30px;">
+      <%= image_tag 'ex_user_thumb_01.png' %>
+      <%= link_to 'Sam Smith', mypage_index_path %>
+    </p>
+    <%= render 'sidemenu' %>
+  </div>
+  <div class="col-md-9" style="margin-top: 20px;">
+    <div class="message-search">
+       <input type="text"/>
+       <%= link_to 'SEARCH', mypage_messages_path, class: 'btn btn-default btn-sm' %>
+    </div>
+    <div class="message-area">
+      <div class="message-left col-md-5">
+        <div class="message-title-box">
+          <div class="message-title-box-header">
+            <%= image_tag 'ex_user_thumb_01.png', size: '50x50' %>
+            <span>2016/02/03</span>&nbsp;
+            <span>Taro Yamada</span>
+          </div>
+          <div class="message-title-box-body">
+            <p>Hello. I am Yamada. <br>I have a question about..</p>
+          </div>
+        </div>
+        <div class="message-title-box">
+          <div class="message-title-box-header">
+            <%= image_tag 'ex_user_thumb_02.jpg', size: '50x50' %>
+            <span>2016/02/03</span>&nbsp;
+            <span>Taro Yamada</span>
+          </div>
+          <div class="message-title-box-body">
+            <p>Hello. I am Yamada. <br>I have a question about..</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-right col-md-6">
+        <div class="message-body">
+          <div class="message-body-box">
+            <div class="message-body-box-header">
+              <%= image_tag 'ex_user_thumb_01.png', size: '40x40' %>
+              <span>2016/02/03</span>&nbsp;
+            </div>
+            <div class="message-body-box-body">
+              <p>Hello. I am Yamada. <br>I have a question about myself.</p>
+              <p>Who am I?</p>
+            </div>
+          </div>
+          <div class="message-body-box">
+            <div class="message-body-box-header">
+              <%= image_tag 'ex_user_thumb_03.png', size: '40x40' %>
+              <span>2016/02/04</span>&nbsp;
+            </div>
+            <div class="message-body-box-body">
+              <p>Thank you for your good question..But..</p>
+              <p>I don't fuckin' know!!</p>
+            </div>
+          </div>
+        </div>
+        <div class="message-new">
+          <textarea></textarea>
+          <div class="btn btn-primary">SEND</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
