@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   scope "(:locale)" do
     root 'main#index'
     get 'helps/aboutvvf'

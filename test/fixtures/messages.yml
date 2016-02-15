@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  backer_user_id: 1
+  title: MyString
+  begin_datetime: 
+
+two:
+  project_id: 1
+  backer_user_id: 1
+  title: MyString
+  begin_datetime: 

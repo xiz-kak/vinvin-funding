@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sort_order: 1
+  logo_image_path: MyString
+
+two:
+  sort_order: 1
+  logo_image_path: MyString

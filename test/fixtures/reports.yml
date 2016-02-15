@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  report_datetime: 
+  draft_flg: 1
+
+two:
+  project_id: 1
+  report_datetime: 
+  draft_flg: 1

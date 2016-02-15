@@ -1,0 +1,83 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acrive_flg: 1
+  begin_date: 
+  end_date: 
+  hero_project_id: 1
+  recommend_1_project_id: 1
+  recommend_2_project_id: 1
+  recommend_3_project_id: 1
+  recommend_4_project_id: 1
+  recommend_5_project_id: 1
+  recommend_6_project_id: 1
+  recommend_7_project_id: 1
+  recommend_8_project_id: 1
+  recommend_9_project_id: 1
+  recommend_10_project_id: 1
+  favorite_1_project_id: 1
+  favorite_2_project_id: 1
+  favorite_3_project_id: 1
+  favorite_4_project_id: 1
+  favorite_5_project_id: 1
+  pledged_1_project_id: 1
+  pledged_2_project_id: 1
+  pledged_3_project_id: 1
+  pledged_4_project_id: 1
+  pledged_5_project_id: 1
+  reward_1_reward_id: 1
+  reward_2_reward_id: 1
+  reward_3_reward_id: 1
+  reward_4_reward_id: 1
+  reward_5_reward_id: 1
+  new_1_project_id: 1
+  new_2_project_id: 1
+  new_3_project_id: 1
+  new_4_project_id: 1
+  new_5_project_id: 1
+  success_1_project_id: 1
+  success_2_project_id: 1
+  success_3_project_id: 1
+  success_4_project_id: 1
+  success_5_project_id: 1
+
+two:
+  acrive_flg: 1
+  begin_date: 
+  end_date: 
+  hero_project_id: 1
+  recommend_1_project_id: 1
+  recommend_2_project_id: 1
+  recommend_3_project_id: 1
+  recommend_4_project_id: 1
+  recommend_5_project_id: 1
+  recommend_6_project_id: 1
+  recommend_7_project_id: 1
+  recommend_8_project_id: 1
+  recommend_9_project_id: 1
+  recommend_10_project_id: 1
+  favorite_1_project_id: 1
+  favorite_2_project_id: 1
+  favorite_3_project_id: 1
+  favorite_4_project_id: 1
+  favorite_5_project_id: 1
+  pledged_1_project_id: 1
+  pledged_2_project_id: 1
+  pledged_3_project_id: 1
+  pledged_4_project_id: 1
+  pledged_5_project_id: 1
+  reward_1_reward_id: 1
+  reward_2_reward_id: 1
+  reward_3_reward_id: 1
+  reward_4_reward_id: 1
+  reward_5_reward_id: 1
+  new_1_project_id: 1
+  new_2_project_id: 1
+  new_3_project_id: 1
+  new_4_project_id: 1
+  new_5_project_id: 1
+  success_1_project_id: 1
+  success_2_project_id: 1
+  success_3_project_id: 1
+  success_4_project_id: 1
+  success_5_project_id: 1

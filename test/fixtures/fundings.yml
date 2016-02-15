@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  reward_id: 1
+  backer_user_id: 1
+  fund_datetime: 
+  fund_amount: 9.99
+  shipping_rate: 9.99
+  total_amount: 9.99
+  payment_method_div: 1
+  payment_vendor_id: 1
+  shipping_first_name: MyString
+  shipping_last_name: MyString
+  shipping_tel: MyString
+  shipping_nation_id: 1
+  shipping_zip_code: MyString
+  shipping_address1: MyString
+  shipping_address2: MyString
+  shipping_address3: MyString
+  shipping_address4: MyString
+
+two:
+  project_id: 1
+  reward_id: 1
+  backer_user_id: 1
+  fund_datetime: 
+  fund_amount: 9.99
+  shipping_rate: 9.99
+  total_amount: 9.99
+  payment_method_div: 1
+  payment_vendor_id: 1
+  shipping_first_name: MyString
+  shipping_last_name: MyString
+  shipping_tel: MyString
+  shipping_nation_id: 1
+  shipping_zip_code: MyString
+  shipping_address1: MyString
+  shipping_address2: MyString
+  shipping_address3: MyString
+  shipping_address4: MyString

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  language_id: 1
+  title: MyString
+  image_path: MyString
+  creator_name: MyString
+  creator_image_path: MyString
+  creator_description: MyText
+
+two:
+  project_id: 1
+  language_id: 1
+  title: MyString
+  image_path: MyString
+  creator_name: MyString
+  creator_image_path: MyString
+  creator_description: MyText

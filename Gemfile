@@ -34,6 +34,10 @@ gem 'pg',             '0.17.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'jquery-turbolinks'
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'seed-fu', '~> 2.3'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

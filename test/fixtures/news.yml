@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  news_datetime: 
+  language_id: 1
+  title: MyString
+  body: MyText
+
+two:
+  news_datetime: 
+  language_id: 1
+  title: MyString
+  body: MyText

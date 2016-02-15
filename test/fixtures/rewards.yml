@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  sort_order: 1
+  price: 9.99
+  estimated_delivery_year: 1
+  estimated_delivery_month: 1
+  estimated_delivery_detail_div: 1
+  ships_to_div: 1
+  max_count: 1
+  status_div: 1
+  applied_datetime: 
+  approved_datetime: 
+  approver_staff_id: 1
+  begin_datetime: 
+
+two:
+  project_id: 1
+  sort_order: 1
+  price: 9.99
+  estimated_delivery_year: 1
+  estimated_delivery_month: 1
+  estimated_delivery_detail_div: 1
+  ships_to_div: 1
+  max_count: 1
+  status_div: 1
+  applied_datetime: 
+  approved_datetime: 
+  approver_staff_id: 1
+  begin_datetime: 
