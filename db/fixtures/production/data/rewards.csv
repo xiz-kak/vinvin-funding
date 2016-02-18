@@ -1,0 +1,4 @@
+#id,project_id,sort_order,price,estimated_delivery_year,estimated_delivery_month,estimated_delivery_detail_div,ships_to_div,max_count,status_div,applied_datetime,approved_datetime,approver_staff_id,begin_datetime
+1,1,1,30,2015,6,1,1,100,5,,,,2016/2/1
+2,1,2,50,2015,6,1,1,50,5,,,,2016/2/1
+3,1,3,100,2015,6,1,1,10,5,,,,2016/2/1
