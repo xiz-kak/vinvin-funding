@@ -7,7 +7,7 @@ class Ranking < ActiveRecord::Base
   end
 
   def ranked_projects(ranking_type)
-    ids = self.ranking_details.where(ranking_type_div: ranking_type).order(:ranking).pluck(:project_id)
+    ids = self.ranking_details.where(ranking_type_div: ranking_type).order(:ranked_order).pluck(:project_id)
     Project.find(ids)
   end
 end

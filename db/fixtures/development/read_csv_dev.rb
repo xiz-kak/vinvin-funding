@@ -138,15 +138,15 @@ Import.csv_read(data_folder, 'rankings.csv', true) do |line, idx|
   end
 end
 
-# Import.csv_read(data_folder, 'ranking_details.csv', true) do |line, idx|
-#   RankingDetail.seed do |s|
-#     s.id                      = line[0]
-#     s.ranking_id              = line[1]
-#     s.ranking_type_div        = line[2]
-#     s.ranking                 = line[3]
-#     s.project_id              = line[4]
-#   end
-# end
+Import.csv_read(data_folder, 'ranking_details.csv', true) do |line, idx|
+  RankingDetail.seed do |s|
+    s.id                      = line[0]
+    s.ranking_id              = line[1]
+    s.ranking_type_div        = line[2]
+    s.ranked_order            = line[3]
+    s.project_id              = line[4]
+  end
+end
 
 Import.csv_read(data_folder, 'funding_r_summaries.csv', true) do |line, idx|
   FundingRSummary.seed do |s|

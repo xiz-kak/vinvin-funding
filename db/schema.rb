@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217105103) do
+ActiveRecord::Schema.define(version: 20160218054317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -258,7 +258,7 @@ ActiveRecord::Schema.define(version: 20160217105103) do
   create_table "ranking_details", force: :cascade do |t|
     t.integer  "ranking_id"
     t.integer  "ranking_type_div"
-    t.integer  "ranking"
+    t.integer  "ranked_order"
     t.integer  "project_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
