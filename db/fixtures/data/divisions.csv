@@ -44,3 +44,10 @@
 43,13,1,1,friend_status-applied
 44,13,2,2,friend_status-accepted
 45,13,3,3,friend_status-declined
+46,14,1,1,ranking_type-hero
+47,14,2,2,ranking_type-recommended
+48,14,3,3,ranking_type-favorite
+49,14,4,4,ranking_type-pledged
+50,14,5,5,ranking_type-return
+51,14,6,6,ranking_type-new
+52,14,7,7,ranking_type-success

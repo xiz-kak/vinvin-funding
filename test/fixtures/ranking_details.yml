@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ranking_id: 1
+  ranking_type_div: 1
+  ranking: 1
+  project_id: 1
+
+two:
+  ranking_id: 1
+  ranking_type_div: 1
+  ranking: 1
+  project_id: 1

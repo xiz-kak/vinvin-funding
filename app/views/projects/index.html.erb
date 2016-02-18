@@ -3,13 +3,18 @@
   <%= render 'sidemenu' %>
   <div class="col-md-9">
     <div class="pjt-list-area">
-      <h2><span><%= t('projects.list') %></span></h2>
-      <h5>Top > <%= t('projects.list') %></h5>
+      <% if @ctgr_name %>
+        <h2><span><%= t(@list_title_t_arg, ctgr_name: @ctgr_name) %></span></h2>
+        <h5>Top > <%= t('projects.category') %> > <%= @ctgr_name %></h5>
+      <% else %>
+        <h2><span><%= t(@list_title_t_arg) %></span></h2>
+        <h5>Top > <%= t(@list_title_t_arg) %></h5>
+      <% end %>
       <div class="pjt-list-base">
         <table class="table">
           <tr>
             <th>Image</th>
-            <th>SuccessOrNot</th>
+            <th>Status</th>
             <th>Title</th>
             <th>Thumbnail</th>
             <th>Creator</th>
@@ -17,36 +22,27 @@
             <th>Pledged Amount</th>
             <th>Funded %</th>
             <th>Supporters</th>
-            <th>Days/Hours to Go</th>
+            <th>Days to Go</th>
           </tr>
-          <tr>
-            <td>
-              <%= link_to projects_detail_path do%>
-                <%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %>
-              <% end %>
-            </td>
-            <td>Success</td>
-            <td>We are doing something!!</td>
-            <td><%= image_tag('ex_hero_thumb.jpg') %></td>
-            <td>Me</td>
-            <td>Product</td>
-            <td>$24,094</td>
-            <td>34%</td>
-            <td>132</td>
-            <td>23Days</td>
-          </tr>
-          <tr>
-            <td>repeat 10 times, with pagination</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          <% @projects.each do |p| %>
+            <% p_ml = p.projects_mls.localed(params[:locale]) %>
+            <tr>
+              <td>
+                <%= link_to projects_detail_path(p.id) do%>
+                  <%= image_tag(p_ml.image_path, width: '150px', height: '100px', alt: 'Project image') %>
+                <% end %>
+              </td>
+              <td><%= p.status_div%></td>
+              <td><%= p_ml.title %></td>
+              <td><%= image_tag(p_ml.creator_image_path) %></td>
+              <td><%= p_ml.creator_name %></td>
+              <td><%= p.category_name(params[:locale]) %></td>
+              <td><%= p.funded_amount_f %></td>
+              <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
+              <td><%= p.backer_count_f %></td>
+              <td><%= p.days_to_go %></td>
+            </tr>
+          <% end %>
         </table>
       </div>
     </div>

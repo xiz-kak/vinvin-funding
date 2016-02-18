@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FundingSummaryTest < ActiveSupport::TestCase
+class FundingPSummaryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

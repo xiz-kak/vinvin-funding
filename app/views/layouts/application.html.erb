@@ -9,12 +9,13 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <p class="notice_"><%= notice %></p>
+  <p class="alert_"><%= alert %></p>
   <%= render 'layouts/header' %>
   <div class="container">
     <%= yield %>
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </div>
 </body>
 </html>

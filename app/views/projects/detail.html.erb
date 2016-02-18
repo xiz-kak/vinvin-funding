@@ -1,11 +1,12 @@
 <% provide(:title, "Details") %>
+<% p_ml = @project.ml(params[:locale]) %>
 <div class="row" style="height: 530px;">
   <div class="col-md-12">
     <div class="pjt-hero">
       <section class="pjt-hero-content">
         <div class="pjt-hero-left">
           <%= link_to projects_detail_path do%>
-            <%= image_tag('ex_hero_left.jpg', width: '100%', height: '100%', alt: 'Hero image') %>
+            <%= image_tag(p_ml.image_path, width: '100%', height: '100%', alt: 'Hero image') %>
           <% end %>
         </div>
         <div class="pjt-hero-right">
@@ -15,16 +16,17 @@
               <span>Pledged</span>
             </div>
             <div class="pjt-hero-right-01-02">
-              <span>$23,345</span>
+              <span><%= @project.funded_amount_f%></span>
             </div>
             <div class="pjt-hero-right-01-03">
               <span>Goal:</span>
-              <span>$60,000</span>
+              <span><%= @project.goal_amount_f %></span>
             </div>
           </div>
           <div class="pjt-hero-right-02">
-            <div class="meter" style="width: 30%">
-              <p>30%</p>
+            <% achieved = @project.funding_achieved %>
+            <div class="meter" style="width: <%= achieved %>30%">
+              <p><%= number_to_percentage(achieved, precision: 0) %></p>
             </div>
           </div>
           <div class="pjt-hero-right-03">
@@ -33,7 +35,7 @@
                 <span class="glyphicon glyphicon-user"></span>
                 <span>Supporters</span>
               </dt>
-              <dd>2,500</dd>
+              <dd><%= @project.backer_count_f %></dd>
             </dl>
           </div>
           <div class="pjt-hero-right-04">
@@ -42,7 +44,7 @@
                 <span class="glyphicon glyphicon-time"></span>
                 <span>Days to Go</span>
               </dt>
-              <dd>12</dd>
+              <dd><%= @project.days_to_go %></dd>
             </dl>
           </div>
           <div class="pjt-hero-right-05">
@@ -53,8 +55,8 @@
         </div>
       </section>
       <div class="pjt-title">
-        <h1>マグネットでかんたん接続＆取り外し、革新的な充電ケーブル！煩わしさを解消</h1>
-        <small><span class="glyphicon glyphicon-tag"><span>Product</small>
+        <h1><%= p_ml.title %></h1>
+        <small><span class="glyphicon glyphicon-tag"><span><%= @project.category_name(params[:locale]) %></small>
       </div>
       <div class="css-icon">
         <span class="btn btn-default btn-xs">f: Like</span>

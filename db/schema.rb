@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160213065905) do
+ActiveRecord::Schema.define(version: 20160217105103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,7 +81,18 @@ ActiveRecord::Schema.define(version: 20160213065905) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "funding_summaries", force: :cascade do |t|
+  create_table "funding_p_summaries", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "funded_count"
+    t.integer  "backer_count"
+    t.decimal  "funded_amount", precision: 10, scale: 2
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.decimal  "goal_amount",   precision: 10, scale: 2
+    t.float    "achieved"
+  end
+
+  create_table "funding_r_summaries", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "reward_id"
     t.integer  "funded_count"
@@ -244,48 +255,21 @@ ActiveRecord::Schema.define(version: 20160213065905) do
     t.datetime "updated_at",          null: false
   end
 
+  create_table "ranking_details", force: :cascade do |t|
+    t.integer  "ranking_id"
+    t.integer  "ranking_type_div"
+    t.integer  "ranking"
+    t.integer  "project_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "rankings", force: :cascade do |t|
-    t.integer  "acrive_flg"
+    t.integer  "active_flg"
     t.datetime "begin_date"
     t.datetime "end_date"
-    t.integer  "hero_project_id"
-    t.integer  "recommend_1_project_id"
-    t.integer  "recommend_2_project_id"
-    t.integer  "recommend_3_project_id"
-    t.integer  "recommend_4_project_id"
-    t.integer  "recommend_5_project_id"
-    t.integer  "recommend_6_project_id"
-    t.integer  "recommend_7_project_id"
-    t.integer  "recommend_8_project_id"
-    t.integer  "recommend_9_project_id"
-    t.integer  "recommend_10_project_id"
-    t.integer  "favorite_1_project_id"
-    t.integer  "favorite_2_project_id"
-    t.integer  "favorite_3_project_id"
-    t.integer  "favorite_4_project_id"
-    t.integer  "favorite_5_project_id"
-    t.integer  "pledged_1_project_id"
-    t.integer  "pledged_2_project_id"
-    t.integer  "pledged_3_project_id"
-    t.integer  "pledged_4_project_id"
-    t.integer  "pledged_5_project_id"
-    t.integer  "reward_1_reward_id"
-    t.integer  "reward_2_reward_id"
-    t.integer  "reward_3_reward_id"
-    t.integer  "reward_4_reward_id"
-    t.integer  "reward_5_reward_id"
-    t.integer  "new_1_project_id"
-    t.integer  "new_2_project_id"
-    t.integer  "new_3_project_id"
-    t.integer  "new_4_project_id"
-    t.integer  "new_5_project_id"
-    t.integer  "success_1_project_id"
-    t.integer  "success_2_project_id"
-    t.integer  "success_3_project_id"
-    t.integer  "success_4_project_id"
-    t.integer  "success_5_project_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "report_mls", force: :cascade do |t|

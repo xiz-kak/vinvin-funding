@@ -11,8 +11,14 @@ Rails.application.routes.draw do
     get 'news/index'
     get 'news/detail'
     get 'projects/index'
-    get 'projects/detail'
+    get 'projects/detail/:id' => 'projects#detail', as: :projects_detail
     get 'projects/creator'
+    get 'projects/open' => 'projects#open'
+    get 'projects/last_minute' => 'projects#last_minute'
+    get 'projects/new' => 'projects#new'
+    get 'projects/pledged' => 'projects#pledged'
+    get 'projects/final_push' => 'projects#final_push'
+    get 'projects/category/:id' => 'projects#category', as: :projects_category
     get 'rewards/select'
     get 'rewards/ship'
     get 'rewards/confirm'

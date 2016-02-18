@@ -1,9 +1,8 @@
 class Category < ActiveRecord::Base
-  include ModelUtil
   has_many :categories_mls
 
-  def ml(locale)
-    categories_mls.localed(locale)
+  def Category.mls(locale)
+    Category.joins(:categories_ml).where(categories_mls: {language_id: 1})
   end
 
   def Category.n(category_id, locale)

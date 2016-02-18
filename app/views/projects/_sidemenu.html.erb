@@ -5,11 +5,11 @@
       <%= t('projects.search_pjt') %>
     </div>
     <ul class="nav nav-pills nav-stacked">
-      <li><%= link_to t('projects.open'), projects_index_path %></li>
-      <li><%= link_to t('projects.last_minute'), projects_index_path %></li>
-      <li><%= link_to t('projects.new'), projects_index_path %></li>
-      <li><%= link_to t('projects.big'), projects_index_path %></li>
-      <li><%= link_to t('projects.final_push'), projects_index_path %></li>
+      <li><%= link_to t('projects.open'), projects_open_path %></li>
+      <li><%= link_to t('projects.last_minute'), projects_last_minute_path %></li>
+      <li><%= link_to t('projects.new'), projects_new_path %></li>
+      <li><%= link_to t('projects.pledged'), projects_pledged_path %></li>
+      <li><%= link_to t('projects.final_push'), projects_final_push_path %></li>
       <li><%= link_to t('projects.list'), projects_index_path %></li>
     </ul>
   </div>
@@ -20,9 +20,9 @@
       <%= t('projects.search_by_ctgr') %>
     </div>
     <ul class="nav nav-pills nav-stacked">
-      <li><%= link_to 'Art', projects_index_path %></li>
-      <li><%= link_to 'Product', projects_index_path %></li>
-      <li>repeate</li>
+      <% Category.all.each do |c| %>
+        <li><%= link_to c.ml(params[:locale]).name, projects_category_path(c.id) %></li>
+      <% end %>
     </ul>
   </div>
 </div>
