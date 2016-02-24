@@ -19,6 +19,12 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'seed-fu', '~> 2.3'
 
+group :development do
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-rubocop'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
