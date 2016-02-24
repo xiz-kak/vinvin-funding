@@ -39,7 +39,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'seed-fu', '~> 2.3'
 
-group :development, :test do
+group :development do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
