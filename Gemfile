@@ -35,6 +35,9 @@ group :development, :test do
 
   gem 'spring'
   gem 'dotenv-rails'
+
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 group :test do
