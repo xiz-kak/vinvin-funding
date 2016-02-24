@@ -25,15 +25,16 @@ group :development do
   gem 'guard-rubocop'
 
   gem 'pry-rails'
-  gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
+
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
+  gem 'pry-byebug'
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
 
   gem 'spring'
   gem 'dotenv-rails'
@@ -46,6 +47,8 @@ group :test do
   gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 group :production do
