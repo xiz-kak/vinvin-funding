@@ -40,6 +40,12 @@ gem 'omniauth-twitter'
 gem 'seed-fu', '~> 2.3'
 
 group :development, :test do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
   # Use sqlite3 as the database for Active Record
   # gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
