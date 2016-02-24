@@ -12,11 +12,11 @@
       <p>
         <dl>
           <dt>2015/12/28</dt>
-          <dd><%= link_to 'Birthday of Kakimoto', news_detail_path %></dd>
+          <dd><%= link_to 'Birthday of Kakimoto', news_detail_path(1) %></dd>
           <dt>2016/01/15</dt>
-          <dd><%= link_to 'System updated.', news_detail_path %></dd>
+          <dd><%= link_to 'System updated.', news_detail_path(2) %></dd>
           <dt>2015/02/01</dt>
-          <dd><%= link_to 'The first day of February', news_detail_path %></dd>
+          <dd><%= link_to 'The first day of February', news_detail_path(3) %></dd>
         </dl>
         <%= link_to 'See all news', news_index_path %>
       </p>

@@ -21,7 +21,7 @@
     </div>
     <ul class="nav nav-pills nav-stacked">
       <% Category.all.each do |c| %>
-        <li><%= link_to c.ml(params[:locale]).name, projects_category_path(c.id) %></li>
+        <li><%= link_to c.ml(locale).name, projects_category_path(c.id) %></li>
       <% end %>
     </ul>
   </div>

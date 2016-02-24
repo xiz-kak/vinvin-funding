@@ -11,13 +11,33 @@
     </p>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t('header.search') , projects_index_path %></li>
-        <li><%= link_to t('header.begin') , apply_index_path %></li>
-        <li><%= link_to t('header.about_vvf') , helps_aboutvvf_path %></li>
-        <li><%= link_to t('header.login') , root_path %></li>
-        <li><%= link_to t('header.register') , root_path %></li>
-        <li><%= link_to t('header.news') , news_index_path %></li>
-        <li><%= link_to t('header.mypage') , mypage_index_path %></li>
+        <li><%= link_to t('header.search'), projects_index_path %></li>
+        <li><%= link_to t('header.begin'), apply_index_path %></li>
+        <li><%= link_to t('header.about_vvf'), helps_aboutvvf_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to t('header.news'), news_index_path %></li>
+          <li><%= link_to image_tag(current_user.image_path, size: '40x40', alt: 'Profile Picture'), mypage_index_path %></li>
+          <li><%= link_to t('header.logout'), destroy_user_session_path %></li>
+        <% else %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= t('header.login')%><b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Facebook', user_omniauth_authorize_path(:facebook) %></li>
+              <li><%= link_to 'Twitter', user_omniauth_authorize_path(:twitter) %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= t('header.signup') %><b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Facebook', user_omniauth_authorize_path(:facebook) %></li>
+              <li><%= link_to 'Twitter', user_omniauth_authorize_path(:twitter) %></li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </div>

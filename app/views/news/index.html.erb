@@ -3,18 +3,16 @@
 <div class="col-md-8 col-md-offset-2">
   <h2><%= t('news.vvf_news') %></h2>
   <table class="table">
-    <tr>
-      <td>2015/12/01</td>
-      <td>
-        <%= link_to news_detail_path do %>
-          <h3>[IMPORTANT]System unavailable for maintenance.</h3>
-        <% end %>
-      </td>
-    </tr>
-    <tr>
-      <td>repeat 10, with pagination</td>
-      <td></td>
-    </tr>
+    <% @news.each do |n| %>
+      <tr>
+        <td><%= l n.news_datetime.to_date %></td>
+        <td>
+          <%= link_to news_detail_path(n.id) do %>
+            <h3><u><%= n.ml(locale).title %></u></h3>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
   </table>
 </div>
 </div>

@@ -25,7 +25,7 @@
             <th>Days to Go</th>
           </tr>
           <% @projects.each do |p| %>
-            <% p_ml = p.projects_mls.localed(params[:locale]) %>
+            <% p_ml = p.ml(locale) %>
             <tr>
               <td>
                 <%= link_to projects_detail_path(p.id) do%>
@@ -36,7 +36,7 @@
               <td><%= p_ml.title %></td>
               <td><%= image_tag(p_ml.creator_image_path) %></td>
               <td><%= p_ml.creator_name %></td>
-              <td><%= p.category_name(params[:locale]) %></td>
+              <td><%= p.category_name(locale) %></td>
               <td><%= p.funded_amount_f %></td>
               <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
               <td><%= p.backer_count_f %></td>

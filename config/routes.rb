@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   scope "(:locale)" do
     root 'main#index'
+    devise_scope :user do
+      get 'sign/in', to: 'users/sessions#new', as: :new_user_session
+      post 'sign_in', to: 'users/session#create', as: :session
+      get 'sign/out', to: 'users/sessions#destroy', as: :destroy_user_session
+    end
     get 'helps/aboutvvf'
     get 'helps/how_to_create'
     get 'helps/how_to_support'
     get 'helps/aboutpayment'
     get 'helps/faqs'
     get 'news/index'
-    get 'news/detail'
+    get 'news/detail/:id' => 'news#detail', as: :news_detail
     get 'projects/index'
     get 'projects/detail/:id' => 'projects#detail', as: :projects_detail
     get 'projects/creator'
@@ -19,11 +24,11 @@ Rails.application.routes.draw do
     get 'projects/pledged' => 'projects#pledged'
     get 'projects/final_push' => 'projects#final_push'
     get 'projects/category/:id' => 'projects#category', as: :projects_category
-    get 'rewards/select'
+    get 'rewards/select/:id' => 'rewards#select', as: :rewards_select
     get 'rewards/ship'
     get 'rewards/confirm'
     get 'rewards/complete'
-    get 'members/index'
+    get 'members/index/:id' => 'members#index', as: :members_index
     get 'members/favorite'
     get 'members/supported'
     get 'members/posted'

@@ -1,0 +1,5 @@
+#id,project_id,parent_comment_id,comment_user_id,comment_datetime,comment_body
+1,1,0,2,2015/12/21 18:00,頑張ってくーダサい
+2,1,0,1,2016/1/5 14:00,ナンジャラホイ
+3,1,1,1,2016/1/10 15:20,頑張りまーすよ！
+4,1,0,1,2016/2/1 13:35,Yes. I'll be back…

@@ -1,5 +1,5 @@
 <% provide(:title, "Details") %>
-<% p_ml = @project.ml(params[:locale]) %>
+<% p_ml = @project.ml(locale) %>
 <div class="row" style="height: 530px;">
   <div class="col-md-12">
     <div class="pjt-hero">
@@ -56,12 +56,11 @@
       </section>
       <div class="pjt-title">
         <h1><%= p_ml.title %></h1>
-        <small><span class="glyphicon glyphicon-tag"><span><%= @project.category_name(params[:locale]) %></small>
+        <small><span class="glyphicon glyphicon-tag"><span><%= @project.category_name(locale) %></small>
       </div>
       <div class="css-icon">
-        <span class="btn btn-default btn-xs">f: Like</span>
-        <span class="btn btn-default btn-xs">t: Tweer</span>
-        <span class="btn btn-default btn-xs">Add to Favorite</span>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
+                             data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
       </div>
     </div>
   </div>
@@ -76,147 +75,88 @@
     </ul>
     <div class="detail-area">
       <section id="pjt-detail" class="detail-section">
-        <div class="detail-box">
-          <div class="detail-box-title">
-            <h2>毎日の充電、もっと手軽にできたらいいなと思いませんか。</h2>
-          </div>
-          <%= image_tag('ex_pjt_detail_01.jpg', width: '100%') %>
-          <div class="detail-box-text">
-            <p class="leftText">我々は今回新製品を開発するにあたって、<span style="color:#FF0000"><span class="bold leftText">"マグネット" </span></span><span style="color:#000000">に着目しました。</span>マグネットの磁力を利用すれば、おおよそケーブルをスマホに近づけるだけで取り付けられる充電ケーブルを開発できるのではないか。そうすれば現代に欠かせないスマートフォンの毎日の充電が少しでもカンタンになったり、スマートに充電できるのではないだろうか。そんな理想を求めてトライアンドエラーを繰り返し、ついに <span style="color:#FF0000"><span class="bold leftText">&rdquo;マグネットケーブル&rdquo;</span></span>は誕生しました!!</p>
-            
-            <p class="leftText">※ご注意：本製品のLightning用のマグネットケーブルにつきましては、Apple社のMFi認証を受けた製品ではございません。そのため、充電したい製品のOSをアップデートした場合本製品が対応しない場合がございます。商品の瑕疵またMFI認証未取得による責任は弊社にございます。</p>
-          </div>
-        </div>
-        <div class="detail-box">
-          <div class="detail-box-title">
-            <h2>製品特徴</h2>
-          </div>
-          <%= image_tag('ex_pjt_detail_02.jpg', width: '100%') %>
-          <div class="detail-box-text">
-            <p class="leftText">表、裏のどちらの面でも接続できます。特にMicro-USBケーブルにおいて、表裏を確かめて充電する必要は一切なくなります。これからはなんとなくケーブルをスマホに近づけるだけでカンタンに充電できるようになります。</p>
-            <p class="leftText">このケーブルは充電だけでなく、<span class="bold leftText">データ転送にも対応しております。また、スイッチを押す事で「充電モード」と「データ転送モード」に切り替える事ができます。「充電モード」では「データ転送モード」のおよそ２倍のスピードで充電可能です</span>。</p>
-          </div>
-        </div>
+        <% @project.details(locale).each do |d| %>
+         <div class="detail-box">
+           <div class="detail-box-title">
+             <% if d.title %>
+               <h2><%= d.title %></h2>
+             <% end %>
+           </div>
+           <% if d.image_path %>
+             <%= image_tag(d.image_path, width: '100%') %>
+           <% end %>
+           <div class="detail-box-text">
+             <% if d.description %>
+               <p><%= d.description %></p>
+             <% end %>
+           </div>
+         </div>
+        <% end %>
       </section>
 
       <section id="pjt-report" class="detail-section">
-        <div class="report-box">
-          <div class="report-box-header">
-            <div class="report-box-creator">
-              <%= image_tag('ex_hero_thumb.jpg') %>
-              <span>いいのべ</span>
+        <% @project.available_reports.each do |r| %>
+          <% r_ml = r.ml(locale) %>
+          <div class="report-box">
+            <div class="report-box-header">
+              <div class="report-box-creator">
+                <%= image_tag(p_ml.creator_image_path) %>
+                <span><%= p_ml.creator_name %></span>
+              </div>
+              <div class="report-box-datetime">
+                <%= I18n.l r.report_datetime, format: :long %>
+              </div>
+              <div class="report-box-title">
+                <%= r_ml.title %>
+              </div>
             </div>
-            <div class="report-box-datetime">
-              December 26th, 14:00
+            <div class="report-box-body">
+              <%= image_tag(r_ml.image_path, width: '100%') if r_ml.image_path %>
+              <%= r_ml.body %>
             </div>
-            <div class="report-box-title">
-              出荷状況について
-            </div>
-          </div>
-          <div class="report-box-body">
-            <p>今日は。待ちにまった出荷日。</p>
-            <p>楽しみだよねー。</p>
-          </div>
-          <div class="report-box-footer">
-            <span class="btn btn-default btn-xs">f</span>
-            <span class="btn btn-default btn-xs">t</span>
-          </div>
-        </div>
-        <div class="report-box">
-          <div class="report-box-header">
-            <div class="report-box-creator">
-              <%= image_tag('ex_hero_thumb.jpg') %>
-              <span>いいのべ</span>
-            </div>
-            <div class="report-box-datetime">
-              December 10th, 12:00
-            </div>
-            <div class="report-box-title">
-              箱詰め作業について
+            <div class="report-box-footer">
+              <span class="btn btn-default btn-xs">f</span>
+              <span class="btn btn-default btn-xs">t</span>
             </div>
           </div>
-          <div class="report-box-body">
-            <p>箱詰め作業中だよ。</p>
-            <p>大変だなー。</p>
-          </div>
-          <div class="report-box-footer">
-            <span class="btn btn-default btn-xs">f</span>
-            <span class="btn btn-default btn-xs">t</span>
-          </div>
-        </div>
-        <div class="report-box">
-          <div class="report-box-header">
-            <div class="report-box-creator">
-              <%= image_tag('ex_hero_thumb.jpg') %>
-              <span>いいのべ</span>
-            </div>
-            <div class="report-box-datetime">
-              November 23th, 10:00
-            </div>
-            <div class="report-box-title">
-              製品制作状況について
-            </div>
-          </div>
-          <div class="report-box-body">
-            <p>今日は。現在絶賛制作中です。</p>
-            <p>楽しみに待っててね。</p>
-          </div>
-          <div class="report-box-footer">
-            <span class="btn btn-default btn-xs">f</span>
-            <span class="btn btn-default btn-xs">t</span>
-          </div>
-        </div>
+        <% end %>
       </section>
 
       <section id="pjt-comment" class="detail-section">
-        <div class="comment-box">
-          <div class="comment-box-header">
-            <div class="comment-box-creator">
-              <%= image_tag('ex_user_thumb_01.png', width: '40px;') %>
-              <span>Hanako</span>
+        <% @project.comments_parents.each do |c| %>
+          <% c_user = User.find(c.comment_user_id) %>
+          <div class="comment-box">
+            <div class="comment-box-header">
+              <div class="comment-box-creator">
+                <%= image_tag(c_user.image_path, width: '40px;') %>
+                <span><%= c_user.full_name %></span>
+              </div>
+              <div class="comment-box-datetime">
+                <%= l c.comment_datetime, format: :long %>
+              </div>
             </div>
-            <div class="comment-box-datetime">
-              December 26th, 14:00
+            <div class="comment-box-body">
+              <p><%= c.comment_body %></p>
             </div>
+            <% c.children.each do |cc| %>
+              <% cc_user = User.find(cc.comment_user_id) %>
+              <div class="comment-reply-box">
+                <div class="comment-reply-box-header">
+                  <div class="comment-reply-box-creator">
+                    <%= image_tag(cc_user.image_path, width: '40px;') %>
+                    <span><%= cc_user.full_name %></span>
+                  </div>
+                  <div class="comment-reply-box-datetime">
+                    <%= cc.comment_datetime %>
+                  </div>
+                </div>
+                <div class="comment-reply-box-body">
+                  <p><%= cc.comment_body %></p>
+                </div>
+              </div>
+            <% end %>
           </div>
-          <div class="comment-box-body">
-            <p>頑張ってください。</p>
-          </div>
-          <div class="comment-box-footer">
-          </div>
-        </div>
-        <div class="comment-box">
-          <div class="comment-box-header">
-            <div class="comment-box-creator">
-              <%= image_tag('ex_user_thumb_02.jpg', width: '40px;') %>
-              <span>Jason</span>
-            </div>
-            <div class="comment-box-datetime">
-              December 20th, 04:00
-            </div>
-          </div>
-          <div class="comment-box-body">
-            <p>はよ作れや。はよ送れや。</p>
-          </div>
-          <div class="comment-box-footer">
-          </div>
-        </div>
-        <div class="comment-box">
-          <div class="comment-box-header">
-            <div class="comment-box-creator">
-              <%= image_tag('ex_user_thumb_03.png', width: '40px;') %>
-              <span>Ellie</span>
-            </div>
-            <div class="comment-box-datetime">
-              December 10th, 04:00
-            </div>
-          </div>
-          <div class="comment-box-body">
-            <p>幸せって、なんですか？</p>
-          </div>
-          <div class="comment-box-footer">
-          </div>
-        </div>
+        <% end %>
       </section>
     </div>
     <div class="btn-select-course">
@@ -225,80 +165,81 @@
       <% end %>
     </div>
   </div>
+
   <div class="col-md-4">
     <div class="pjt-creator">
       <h2>Creator</h2>
       <div class="pjt-creator-box">
         <div class="pjt-creator-box-header">
           <%= link_to projects_creator_path do %>
-            <%= image_tag('ex_hero_thumb.jpg') %>
-            <span>いいのべ</span>
+            <%= image_tag(p_ml.creator_image_path) %>
+            <span><%= p_ml.creator_name %></span>
           <% end %>
+          <p><%= link_to 'Contact this creator', projects_detail_path %></p>
         </div>
         <div class="pjt-creator-box-body">
-          <p><%= link_to 'f: iinobe-fb', 'https://www.facebook.com' %></p>
-          <p><%= link_to 't: iinobe-twitter', 'https://www.twitter.com' %></p>
+          <p><%= link_to "f: #{@project.facebook_user_name}", "https://www.facebook.com/#{@project.facebook_user_name}" %></p>
+          <p><%= link_to "t: #{@project.twitter_user_name}", "https://www.twitter.com/#{@project.twitter_user_name}" %></p>
         </div>
         <div class="pjt-creator-box-footer">
-          <p><%= link_to 'Contact this creator', projects_detail_path %></p>
+          <p>Members</p>
+          <p>
+            <% c_user = User.find(@project.creator_user_id) %>
+            <%= link_to members_index_path(c_user.id) do %>
+              <%= image_tag(c_user.image_path, size:'45x45') %>
+              <span><%= c_user.full_name %></span>
+            <% end %>
+          </p>
+          <% @project.project_members.each do |m| %>
+            <% m_user = User.find(m.member_user_id) %>
+            <p>
+              <%= link_to members_index_path(m_user.id) do %>
+                <%= image_tag(m_user.image_path, size:'45x45') %>
+                <span><%= m_user.full_name %></span>
+              <% end %>
+            </p>
+          <% end %>
         </div>
       </div>
     </div>
     <div id="pjt-course" class="pjt-course">
       <h2>Courses</h2>
-      <div class="pjt-course-box">
-        <div class="pjt-course-box-header">
-          <h3>Course of $30</h3>
-        </div>
-        <div class="pjt-course-box-body">
-          <div class="course-title">
-            <h2>Cable-A, B & C</h2>
+      <% @project.rewards.each do |r| %>
+        <% r_ml = r.ml(locale) %>
+        <div class="pjt-course-box">
+          <div class="pjt-course-box-header">
+            <h3>Course of <%= r.price %></h3>
           </div>
-          <div class="course-picture">
-            <%= image_tag "ex_return_01.png"%>
+          <div class="pjt-course-box-body">
+            <div class="course-title">
+              <h2><%= r_ml.title %></h2>
+            </div>
+            <div class="course-picture">
+              <%= image_tag r_ml.image_path %>
+            </div>
+            <div class="course-description">
+              <p>
+                <%= r_ml.description %>
+              </p>
+            </div>
+            <hr></hr>
+            <p>
+            <span class="glyphicon glyphicon-briefcase">
+              Estimated delivery: 
+              <%= t(:abbr_month_names, scope: :date)[r.estimated_delivery_month] + ' ' + r.estimated_delivery_year.to_s %>
+            </span>
+            </p>
+            <p>
+            <span class="glyphicon glyphicon-globe">
+              Ships to: <%= Division.val_name(5, r.ships_to_div, locale) %>
+            </span>
+            </p>
           </div>
-          <div class="course-description">
-            <p class="leftText">リターン選択の際は<span style="color:rgb(255, 0, 0)"><span class="bold leftText">まずは「合計個数」をお選び頂き</span></span><span class="bold leftText">、<span style="color:rgb(255, 0, 0)">次にお選び頂きました「合計個数」</span>になるよう、４製品からお好きな製品をお好きな個数お選びください。</span></p>
-            <p class="leftText"><span class="bold leftText">　1. Lightningマグネットケーブル　&times; a個</span></p>
-            <p class="leftText"><span class="bold leftText">　2. Lightningアダプタ　&times; b個</span></p>
-            <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
-            <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
+          <div class="pjt-course-box-footer">
+            <%= link_to 'SELECT', rewards_select_path(r.id) %>
           </div>
-          <hr></hr>
-          <p><span class="glyphicon glyphicon-briefcase">Estimated delivery: March 2016</span></p>
-          <p><span class="glyphicon glyphicon-globe">Ships to: Anywhere in the world</span></p>
         </div>
-        <div class="pjt-course-box-footer">
-          <%= link_to 'SELECT', rewards_select_path %>
-        </div>
-      </div>
-      <div class="pjt-course-box">
-        <div class="pjt-course-box-header">
-          <h3>Course of $50</h3>
-        </div>
-        <div class="pjt-course-box-body">
-          <div class="course-title">
-            <h2>Cable-A, B, C & D</h2>
-          </div>
-          <div class="course-picture">
-            <%= image_tag "ex_return_02.png"%>
-          </div>
-          <div class="course-description">
-            <p class="leftText">リターン選択の際は<span style="color:rgb(255, 0, 0)"><span class="bold leftText">まずは「合計個数」をお選び頂き</span></span><span class="bold leftText">、<span style="color:rgb(255, 0, 0)">次にお選び頂きました「合計個数」</span>になるよう、４製品からお好きな製品をお好きな個数お選びください。</span></p>
-            <p class="leftText"><span class="bold leftText">　1. Lightningマグネットケーブル　&times; a個</span></p>
-            <p class="leftText"><span class="bold leftText">　2. Lightningアダプタ　&times; b個</span></p>
-            <p class="leftText"><span class="bold leftText">　3. Micro-USBマグネットケーブル　&times; c個</span></p>
-            <p class="leftText"><span class="bold leftText">　4. Micro-USBアダプタ　&times; d個</span></p>
-          </div>
-          <hr></hr>
-          <p><span class="glyphicon glyphicon-briefcase">Estimated delivery: March 2016</span></p>
-          <p><span class="glyphicon glyphicon-globe">Ships to: Anywhere in the world</span></p>
-        </div>
-        <div class="pjt-course-box-footer">
-          <%= link_to 'SELECT', rewards_select_path %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
-

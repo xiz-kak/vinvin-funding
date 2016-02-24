@@ -197,11 +197,15 @@ section.badge-success:after {
   }
 }
 
-.comment-box {
-  margin: 30px 0px;
+.comment-reply-box {
+  margin: 3px 0px;
   border: solid 1px $gray;
   border-radius: 4px;
   padding: 5px;
+  .comment-reply-box-body {
+    border: solid 1px $gray-lighter;
+    background: white;
+  }
 }
 
 .btn-select-course {

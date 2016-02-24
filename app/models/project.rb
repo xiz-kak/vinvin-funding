@@ -1,16 +1,30 @@
 class Project < ActiveRecord::Base
-  include ModelUtil
 
   has_many :projects_mls
   has_many :project_details
+  has_many :project_members
   has_many :rewards
-  has_many :funding_p_summaries
+  has_many :reports
+  has_many :comments
+  has_one :funding_p_summary
 
   scope :open, -> { where(status_div: 5).where("begin_datetime <= :now and due_datetime >= :now", now: Time.zone.now) }
   scope :proper, -> { where(status_div: [5, 9]).where.not(closed_status_div: 1) }
 
   def ml(locale)
     self.projects_mls.localed(locale_for_view(locale))
+  end
+
+  def details(locale)
+    self.project_details.sorted_localed(locale_for_view(locale))
+  end
+
+  def available_reports
+    self.reports.where(draft_flg: 0).order(report_datetime: :DESC)
+  end
+
+  def comments_parents
+    self.comments.where(parent_comment_id: 0).order(comment_datetime: :DESC)
   end
 
   def category_name(locale)
@@ -22,11 +36,11 @@ class Project < ActiveRecord::Base
   end
 
   def backer_count_f
-    self.funding_p_summaries.first.backer_count.to_s(:delimited)
+    self.funding_p_summary.backer_count.to_s(:delimited)
   end
 
   def funded_amount
-    self.funding_p_summaries.first.funded_amount
+    self.funding_p_summary.funded_amount
   end
 
   def funded_amount_f
@@ -34,7 +48,7 @@ class Project < ActiveRecord::Base
   end
 
   def funding_achieved
-    self.funding_p_summaries.first.funded_amount/self.goal_amount*100
+    self.funding_p_summary.funded_amount/self.goal_amount*100
   end
 
   def days_to_go
@@ -45,6 +59,16 @@ class Project < ActiveRecord::Base
       1
     else
       0
+    end
+  end
+
+  def locale_for_view(locale)
+    langs = self.multi_language_ids.split(',').map(&:to_i)
+    langs << self.prime_language_id
+    if langs.include?(Language.locale_to_lang(locale))
+      locale
+    else
+      Language.lang_to_locale(self.prime_language_id)
     end
   end
 
@@ -66,27 +90,15 @@ class Project < ActiveRecord::Base
     end
 
     def pledged_list
-      Project.joins(:funding_p_summaries).proper.order('funding_p_summaries.funded_amount DESC').limit(100)
+      Project.joins(:funding_p_summary).proper.order('funding_p_summaries.funded_amount DESC').limit(100)
     end
 
     def final_push_list
-      Project.joins(:funding_p_summaries).open.where('funding_p_summaries.achieved < 1').order('funding_p_summaries.achieved DESC').limit(100)
+      Project.joins(:funding_p_summary).open.where('funding_p_summaries.achieved < 1').order('funding_p_summaries.achieved DESC').limit(100)
     end
 
     def list_by_category(ctgr_id)
       Project.proper.where(category_id: ctgr_id)
-    end
-  end
-
-  private
-
-  def locale_for_view(locale)
-    langs = self.multi_language_ids.split(',').map(&:to_i)
-    langs << self.prime_language_id
-    if langs.include?(self.class.locale_to_lang(locale))
-      locale
-    else
-      self.class.lang_to_locale(self.prime_language_id)
     end
   end
 end

@@ -1,4 +1,4 @@
-class ReportMl < ActiveRecord::Base
+class ReportsMl < ActiveRecord::Base
   belongs_to :report
 
   include MlCommon

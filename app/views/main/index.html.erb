@@ -3,7 +3,7 @@
   <div class="col-md-12">
 
     <div class="hero" style="background-image:url(<%= asset_path 'ex_hero_main.jpg' %>)">
-      <% hero_project_ml = @hero_project.projects_mls.localed(params[:locale]) %>
+      <% hero_project_ml = @hero_project.ml(locale) %>
       <section class="hero-content sash-success">
         <div class="sash-success">
         </div>
@@ -25,7 +25,7 @@
             <% end %>
             <%= link_to projects_category_path(@hero_project.category_id), class:'category-link' do %>
               <span class="glyphicon glyphicon-tag"></span>
-              <span><%= @hero_project.category_name(params[:locale]) %></span>
+              <span><%= @hero_project.category_name(locale) %></span>
             <% end %>
           </div>
           <div class="hero-right-03">
@@ -90,7 +90,7 @@
               <th>Days to Go</th>
             </tr>
             <% @rcm_projects.each do |p| %>
-              <% p_ml = p.projects_mls.localed(params[:locale]) %>
+              <% p_ml = p.ml(locale) %>
               <tr>
                 <td>
                   <%= link_to projects_detail_path(p.id) do%>
@@ -101,7 +101,7 @@
                 <td><%= p_ml.title %></td>
                 <td><%= image_tag(p_ml.creator_image_path) %></td>
                 <td><%= p_ml.creator_name %></td>
-                <td><%= p.category_name(params[:locale]) %></td>
+                <td><%= p.category_name(locale) %></td>
                 <td><%= p.funded_amount_f %></td>
                 <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
                 <td><%= p.backer_count_f %></td>
@@ -129,7 +129,7 @@
               <th>Days to Go</th>
             </tr>
             <% @fav_projects.each do |p| %>
-              <% p_ml = p.projects_mls.localed(params[:locale]) %>
+              <% p_ml = p.ml(locale) %>
               <tr>
                 <td>
                   <%= link_to projects_detail_path(p.id) do%>
@@ -140,7 +140,7 @@
                 <td><%= p_ml.title %></td>
                 <td><%= image_tag(p_ml.creator_image_path) %></td>
                 <td><%= p_ml.creator_name %></td>
-                <td><%= p.category_name(params[:locale]) %></td>
+                <td><%= p.category_name(locale) %></td>
                 <td><%= p.funded_amount_f %></td>
                 <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
                 <td><%= p.backer_count_f %></td>
@@ -168,7 +168,7 @@
               <th>Days to Go</th>
             </tr>
             <% @fav_projects.each do |p| %>
-              <% p_ml = p.projects_mls.localed(params[:locale]) %>
+              <% p_ml = p.ml(locale) %>
               <tr>
                 <td>
                   <%= link_to projects_detail_path(p.id) do%>
@@ -179,7 +179,7 @@
                 <td><%= p_ml.title %></td>
                 <td><%= image_tag(p_ml.creator_image_path) %></td>
                 <td><%= p_ml.creator_name %></td>
-                <td><%= p.category_name(params[:locale]) %></td>
+                <td><%= p.category_name(locale) %></td>
                 <td><%= p.funded_amount_f %></td>
                 <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
                 <td><%= p.backer_count_f %></td>
@@ -207,7 +207,7 @@
               <th>Days to Go</th>
             </tr>
             <% @fav_projects.each do |p| %>
-              <% p_ml = p.projects_mls.localed(params[:locale]) %>
+              <% p_ml = p.ml(locale) %>
               <tr>
                 <td>
                   <%= link_to projects_detail_path(p.id) do%>
@@ -218,7 +218,7 @@
                 <td><%= p_ml.title %></td>
                 <td><%= image_tag(p_ml.creator_image_path) %></td>
                 <td><%= p_ml.creator_name %></td>
-                <td><%= p.category_name(params[:locale]) %></td>
+                <td><%= p.category_name(locale) %></td>
                 <td><%= p.funded_amount_f %></td>
                 <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
                 <td><%= p.backer_count_f %></td>
@@ -246,7 +246,7 @@
               <th>Days to Go</th>
             </tr>
             <% @fav_projects.each do |p| %>
-              <% p_ml = p.projects_mls.localed(params[:locale]) %>
+              <% p_ml = p.ml(locale) %>
               <tr>
                 <td>
                   <%= link_to projects_detail_path(p.id) do%>
@@ -257,7 +257,7 @@
                 <td><%= p_ml.title %></td>
                 <td><%= image_tag(p_ml.creator_image_path) %></td>
                 <td><%= p_ml.creator_name %></td>
-                <td><%= p.category_name(params[:locale]) %></td>
+                <td><%= p.category_name(locale) %></td>
                 <td><%= p.funded_amount_f %></td>
                 <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
                 <td><%= p.backer_count_f %></td>
@@ -285,7 +285,7 @@
               <th>Days to Go</th>
             </tr>
             <% @fav_projects.each do |p| %>
-              <% p_ml = p.projects_mls.localed(params[:locale]) %>
+              <% p_ml = p.ml(locale) %>
               <tr>
                 <td>
                   <%= link_to projects_detail_path(p.id) do%>
@@ -296,7 +296,7 @@
                 <td><%= p_ml.title %></td>
                 <td><%= image_tag(p_ml.creator_image_path) %></td>
                 <td><%= p_ml.creator_name %></td>
-                <td><%= p.category_name(params[:locale]) %></td>
+                <td><%= p.category_name(locale) %></td>
                 <td><%= p.funded_amount_f %></td>
                 <td><%= number_to_percentage(p.funding_achieved, precision: 0) %></td>
                 <td><%= p.backer_count_f %></td>

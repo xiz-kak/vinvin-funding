@@ -1,5 +1,4 @@
 class Category < ActiveRecord::Base
-  include ModelUtil
   has_many :categories_mls
 
   def ml(locale)

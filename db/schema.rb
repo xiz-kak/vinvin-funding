@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218054317) do
+ActiveRecord::Schema.define(version: 20160223061124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -162,11 +162,17 @@ ActiveRecord::Schema.define(version: 20160218054317) do
 
   create_table "news", force: :cascade do |t|
     t.datetime "news_datetime"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "news_mls", force: :cascade do |t|
+    t.integer  "new_id"
     t.integer  "language_id"
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -272,7 +278,15 @@ ActiveRecord::Schema.define(version: 20160218054317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "report_mls", force: :cascade do |t|
+  create_table "reports", force: :cascade do |t|
+    t.integer  "project_id"
+    t.datetime "report_datetime"
+    t.integer  "draft_flg"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "reports_mls", force: :cascade do |t|
     t.integer  "report_id"
     t.integer  "language_id"
     t.string   "title"
@@ -280,14 +294,6 @@ ActiveRecord::Schema.define(version: 20160218054317) do
     t.text     "body"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "reports", force: :cascade do |t|
-    t.integer  "project_id"
-    t.datetime "report_datetime"
-    t.integer  "draft_flg"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
   create_table "rewards", force: :cascade do |t|
@@ -327,6 +333,26 @@ ActiveRecord::Schema.define(version: 20160218054317) do
     t.datetime "updated_at",                             null: false
   end
 
+  create_table "social_profiles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "email"
+    t.string   "url"
+    t.string   "image_path"
+    t.string   "description"
+    t.text     "credentials"
+    t.text     "raw_info"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "username"
+  end
+
+  add_index "social_profiles", ["provider", "uid"], name: "index_social_profiles_on_provider_and_uid", unique: true, using: :btree
+  add_index "social_profiles", ["user_id"], name: "index_social_profiles_on_user_id", using: :btree
+
   create_table "tips", force: :cascade do |t|
     t.datetime "tips_datetime"
     t.integer  "receiver_user_id"
@@ -348,8 +374,8 @@ ActiveRecord::Schema.define(version: 20160218054317) do
     t.integer  "uid",                       limit: 8
     t.string   "provider"
     t.string   "password"
-    t.string   "user_first_name"
-    t.string   "user_last_name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "image_path"
     t.integer  "language_id"
     t.string   "email"
@@ -380,8 +406,11 @@ ActiveRecord::Schema.define(version: 20160218054317) do
     t.datetime "member_from"
     t.integer  "blacklisted_flg"
     t.text     "blacklisted_comment"
+    t.string   "name"
+    t.string   "middle_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "social_profiles", "users"
 end

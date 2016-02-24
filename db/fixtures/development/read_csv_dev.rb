@@ -2,46 +2,48 @@ require "#{Rails.root}/lib/import.rb"
 
 data_folder = "#{Rails.root}/db/fixtures/development/data"
 
-# Import.csv_read(data_folder, 'users.csv', true) do |line, idx|
-#   User.seed do |s|
-#     s.id         = line[0]
-#     s.user_cd    = line[1]
-#     s.uid    = line[2]
-#     s.provider    = line[3]
-#     s.user_first_name    = line[4]
-#     s.user_last_name    = line[5]
-#     s.image_path    = line[6]
-#     s.language_id    = line[7]
-#     s.email    = line[8]
-#     s.tel    = line[9]
-#     s.nation_id    = line[10]
-#     s.zip_code    = line[11]
-#     s.address1    = line[12]
-#     s.address2    = line[13]
-#     s.address3    = line[14]
-#     s.address4    = line[15]
-#     s.twitter_user_name = line[16]
-#     s.facebook_user_name = line[17]
-#     s.url1        = line[18]
-#     s.url2        = line[19]
-#     s.url3        = line[20]
-#     s.birth_date  = line[21]
-#     s.birth_date_pub_div = line[22]
-#     s.gender_div  = line[23]
-#     s.gender_pub_div = line[24]
-#     s.self_description = line[25]
-#     s.status_div  = line[26]
-#     s.withdraw_reason_div = line[27]
-#     s.withdraw_reason_detail = line[28]
-#     s.news_letter_subscribe_flg = line[29]
-#     s.report_notify_flg = line[30]
-#     s.message_notify_flg = line[31]
-#     s.comment_notify_flg = line[32]
-#     s.member_from = line[33]
-#     s.blacklisted_flg = line[34]
-#     s.blacklisted_comment = line[35]
-#   end
-# end
+Import.csv_read(data_folder, 'users.csv', true) do |line, idx|
+  User.seed do |s|
+    s.id         = line[0]
+    s.user_cd    = line[1]
+    s.uid    = line[2]
+    s.provider    = line[3]
+    s.first_name    = line[4]
+    s.last_name    = line[5]
+    s.image_path    = line[6]
+    s.language_id    = line[7]
+    s.email    = line[8]
+    s.tel    = line[9]
+    s.nation_id    = line[10]
+    s.zip_code    = line[11]
+    s.address1    = line[12]
+    s.address2    = line[13]
+    s.address3    = line[14]
+    s.address4    = line[15]
+    s.twitter_user_name = line[16]
+    s.facebook_user_name = line[17]
+    s.url1        = line[18]
+    s.url2        = line[19]
+    s.url3        = line[20]
+    s.birth_date  = line[21]
+    s.birth_date_pub_div = line[22]
+    s.gender_div  = line[23]
+    s.gender_pub_div = line[24]
+    s.self_description = line[25]
+    s.status_div  = line[26]
+    s.withdraw_reason_div = line[27]
+    s.withdraw_reason_detail = line[28]
+    s.news_letter_subscribe_flg = line[29]
+    s.report_notify_flg = line[30]
+    s.message_notify_flg = line[31]
+    s.comment_notify_flg = line[32]
+    s.member_from = line[33]
+    s.blacklisted_flg = line[34]
+    s.blacklisted_comment = line[35]
+    s.name = line[36]
+    s.middle_name = line[37]
+  end
+end
 
 Import.csv_read(data_folder, 'projects.csv', true) do |line, idx|
   Project.seed do |s|
@@ -168,5 +170,62 @@ Import.csv_read(data_folder, 'funding_p_summaries.csv', true) do |line, idx|
     s.funded_amount           = line[4]
     s.goal_amount             = line[5]
     s.achieved                = line[6]
+  end
+end
+
+Import.csv_read(data_folder, 'reports.csv', true) do |line, idx|
+  Report.seed do |s|
+    s.id                      = line[0]
+    s.project_id              = line[1]
+    s.report_datetime         = line[2]
+    s.draft_flg               = line[3]
+  end
+end
+
+Import.csv_read(data_folder, 'reports_mls.csv', true) do |line, idx|
+  ReportsMl.seed do |s|
+    s.id                      = line[0]
+    s.report_id               = line[1]
+    s.language_id             = line[2]
+    s.title                   = line[3]
+    s.image_path              = line[4]
+    s.body                    = line[5]
+  end
+end
+
+Import.csv_read(data_folder, 'comments.csv', true) do |line, idx|
+  Comment.seed do |s|
+    s.id                      = line[0]
+    s.project_id              = line[1]
+    s.parent_comment_id       = line[2]
+    s.comment_user_id         = line[3]
+    s.comment_datetime        = line[4]
+    s.comment_body            = line[5]
+  end
+end
+
+Import.csv_read(data_folder, 'project_members.csv', true) do |line, idx|
+  ProjectMember.seed do |s|
+    s.id                      = line[0]
+    s.project_id              = line[1]
+    s.member_user_id          = line[2]
+    s.sort_order              = line[3]
+  end
+end
+
+Import.csv_read(data_folder, 'news.csv', true) do |line, idx|
+  New.seed do |s|
+    s.id                      = line[0]
+    s.news_datetime           = line[1]
+  end
+end
+
+Import.csv_read(data_folder, 'news_mls.csv', true) do |line, idx|
+  NewsMl.seed do |s|
+    s.id                      = line[0]
+    s.new_id                  = line[1]
+    s.language_id             = line[2]
+    s.title                   = line[3]
+    s.body                    = line[4]
   end
 end

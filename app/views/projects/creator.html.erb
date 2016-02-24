@@ -12,9 +12,9 @@
         <dd><%= link_to 't', 'https://www.twitter.com' %></dd>
         <dt>Members</dt>
         <dd>
-          <%= link_to image_tag('ex_user_thumb_01.png', size: '70x70'), members_index_path %>
-          <%= link_to image_tag('ex_user_thumb_02.jpg', size: '70x70'), members_index_path %>
-          <%= link_to image_tag('ex_user_thumb_03.png', size: '70x70'), members_index_path %>
+          <%= link_to image_tag('ex_user_thumb_01.png', size: '70x70'), members_index_path(1) %>
+          <%= link_to image_tag('ex_user_thumb_02.jpg', size: '70x70'), members_index_path(1) %>
+          <%= link_to image_tag('ex_user_thumb_03.png', size: '70x70'), members_index_path(1) %>
         </dd>
       </dl>
     </div>
@@ -39,7 +39,7 @@
         </tr>
         <tr>
           <td>
-            <%= link_to projects_detail_path do%>
+            <%= link_to projects_detail_path(1) do%>
               <%= image_tag('ex_hero_left.jpg', width: '150px', height: '100px', alt: 'Hero image') %>
             <% end %>
           </td>
