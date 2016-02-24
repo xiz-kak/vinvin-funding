@@ -1,3 +1,59 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                        :integer          not null, primary key
+#  sign_in_count             :integer          default(0), not null
+#  current_sign_in_at        :datetime
+#  last_sign_in_at           :datetime
+#  current_sign_in_ip        :inet
+#  last_sign_in_ip           :inet
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  user_cd                   :string
+#  uid                       :integer
+#  provider                  :string
+#  password                  :string
+#  first_name                :string
+#  last_name                 :string
+#  image_path                :string
+#  language_id               :integer
+#  email                     :string
+#  tel                       :string
+#  nation_id                 :integer
+#  zip_code                  :string
+#  address1                  :string
+#  address2                  :string
+#  address3                  :string
+#  address4                  :string
+#  twitter_user_name         :string
+#  facebook_user_name        :string
+#  url1                      :string
+#  url2                      :string
+#  url3                      :string
+#  birth_date                :date
+#  birth_date_pub_div        :integer
+#  gender_div                :integer
+#  gender_pub_div            :integer
+#  self_description          :text
+#  status_div                :integer
+#  withdraw_reason_div       :integer
+#  withdraw_reason_detail    :text
+#  news_letter_subscribe_flg :integer
+#  report_notify_flg         :integer
+#  message_notify_flg        :integer
+#  comment_notify_flg        :integer
+#  member_from               :datetime
+#  blacklisted_flg           :integer
+#  blacklisted_comment       :text
+#  name                      :string
+#  middle_name               :string
+#
+# Indexes
+#
+#  index_users_on_email  (email) UNIQUE
+#
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

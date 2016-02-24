@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: project_details
+#
+#  id          :integer          not null, primary key
+#  project_id  :integer
+#  language_id :integer
+#  sort_order  :integer
+#  title       :string
+#  description :text
+#  image_path  :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class ProjectDetail < ActiveRecord::Base
   belongs_to :project
 

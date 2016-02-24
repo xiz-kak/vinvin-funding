@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: reports
+#
+#  id              :integer          not null, primary key
+#  project_id      :integer
+#  report_datetime :datetime
+#  draft_flg       :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class Report < ActiveRecord::Base
   has_many :reports_mls
 

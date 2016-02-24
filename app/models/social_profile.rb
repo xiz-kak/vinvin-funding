@@ -1,3 +1,33 @@
+# == Schema Information
+#
+# Table name: social_profiles
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  provider    :string
+#  uid         :string
+#  name        :string
+#  nickname    :string
+#  email       :string
+#  url         :string
+#  image_path  :string
+#  description :string
+#  credentials :text
+#  raw_info    :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  username    :string
+#
+# Indexes
+#
+#  index_social_profiles_on_provider_and_uid  (provider,uid) UNIQUE
+#  index_social_profiles_on_user_id           (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_d33f8c64b4  (user_id => users.id)
+#
+
 class SocialProfile < ActiveRecord::Base
   require 'o_auth/o_auth_policy'
   belongs_to :user

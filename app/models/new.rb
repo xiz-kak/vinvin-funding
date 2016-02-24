@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: news
+#
+#  id            :integer          not null, primary key
+#  news_datetime :datetime
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 class New < ActiveRecord::Base
   has_many :news_mls
 
