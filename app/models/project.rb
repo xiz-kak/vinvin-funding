@@ -1,3 +1,37 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id                      :integer          not null, primary key
+#  type_div                :integer
+#  prime_language_id       :integer
+#  multi_language_ids      :string
+#  category_id             :integer
+#  goal_amount             :decimal(10, 2)
+#  currency_id             :integer
+#  applied_duration_months :integer
+#  applied_duration_days   :integer
+#  applied_due_date        :datetime
+#  creator_user_id         :integer
+#  twitter_user_name       :string
+#  facebook_user_name      :string
+#  url1                    :string
+#  url2                    :string
+#  url3                    :string
+#  nation_id               :integer
+#  region                  :string
+#  status_div              :integer
+#  closed_status_div       :integer
+#  applied_datetime        :datetime
+#  approved_datetime       :datetime
+#  approver_staff_id       :integer
+#  begin_datetime          :datetime
+#  due_datetime            :datetime
+#  end_datetime            :datetime
+#  created_at              :datetime         not null
+#  updated_at              :datetime         not null
+#
+
 class Project < ActiveRecord::Base
 
   has_many :projects_mls

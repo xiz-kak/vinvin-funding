@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: rankings
+#
+#  id         :integer          not null, primary key
+#  active_flg :integer
+#  begin_date :datetime
+#  end_date   :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Ranking < ActiveRecord::Base
   has_many :ranking_details
 

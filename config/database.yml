@@ -14,8 +14,6 @@ default: &default
 development:
   <<: *default
   database: vvf_dev
-  username: rails_user
-  password: rails_user
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -24,8 +22,6 @@ development:
 test:
   <<: *default
   database: vvf_test
-  username: rails_user
-  password: rails_user
   host: localhost
 
 production:
