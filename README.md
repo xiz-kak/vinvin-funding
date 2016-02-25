@@ -33,5 +33,4 @@ Please feel free to use a different markup language if you do not plan to run
 - `cd path/to/vinvin-funding`
 - `bundle install`
 - `bundle exec rake db:migrate:reset db:seed_fu`
-
-- `bundle exec guard to watch file changes`
+- `bundle exec guard` to watch file changes
