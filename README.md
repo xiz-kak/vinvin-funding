@@ -27,3 +27,10 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+# Quick Start
+- `git clone`
+- `cd path/to/vinvin-funding`
+- `bundle install`
+- `bundle exec rake db:migrate:reset db:seed_fu`
+- `bundle exec guard` to watch file changes
